@@ -1,0 +1,75 @@
+[
+    {
+      "id": "1",
+      "name": "Grand hotel Stockholm",
+      "hotelImg": "https://picsum.photos/300/160",
+      "roomImg": "https://picsum.photos/200/200",
+      "countryFlag": "https://cdn.glitch.global/ff635638-a414-4d00-8436-ba9e34e867e8/11a9a0b9370c8aafe215161a1c4d5f0b_swe-SE_90589.gif?v=1663494926971",
+      "price": "995",
+      "rating": "4.5",
+      "country": "Sweden",
+      "routing-page": "/sweden",
+      "city": "Sweden"
+    },
+    {
+      "id": "2",
+      "name": "Post hotel Gothenburg",
+      "hotelImg": "https://picsum.photos/300/161",
+      "roomImg": "https://picsum.photos/200/200",
+      "countryFlag": "https://cdn.glitch.global/ff635638-a414-4d00-8436-ba9e34e867e8/Flag_of_England.svg.png?v=1663494925638",
+      "price": "1395",
+      "rating": "2",
+      "country": "England",
+      "routing-page": "/england",
+      "city": "Sweden"
+    },
+    {
+      "id": "3",
+      "name": "Riviera hotel",
+      "hotelImg": "https://picsum.photos/300/163",
+      "roomImg": "https://picsum.photos/200/200",
+      "countryFlag": "https://cdn.glitch.global/ff635638-a414-4d00-8436-ba9e34e867e8/14b2d4d75b676cb53cf4950895de6726_swe-SE_90765.gif?v=1663494925915",
+      "price": "895",
+      "rating": "4",
+      "country": "Spanien",
+      "routing-page": "/spain",
+      "city": "Sweden"
+    },
+    {
+      "id": "4",
+      "name": "Scandic plaza",
+      "hotelImg": "https://picsum.photos/300/164",
+      "roomImg": "https://picsum.photos/200/200",
+      "countryFlag": "https://cdn.glitch.global/ff635638-a414-4d00-8436-ba9e34e867e8/11a9a0b9370c8aafe215161a1c4d5f0b_swe-SE_90589.gif?v=16634949269710",
+      "price": "1195",
+      "rating": "3.5",
+      "country": "Sweden",
+      "routing-page": "/sweden",
+      "city": "Italien"
+    },
+    {
+      "id": "4",
+      "name": "Scandic plaza",
+      "hotelImg": "https://picsum.photos/300/164",
+      "roomImg": "https://picsum.photos/200/200",
+      "countryFlag": "https://cdn.glitch.global/ff635638-a414-4d00-8436-ba9e34e867e8/11a9a0b9370c8aafe215161a1c4d5f0b_swe-SE_90589.gif?v=16634949269710",
+      "price": "1195",
+      "rating": "3.5",
+      "country": "Sweden",
+      "routing-page": "/sweden",
+      "city": "Italien"
+    },
+    {
+      "id": "5",
+      "name": "Marbella country club",
+      "hotelImg": "https://picsum.photos/300/165",
+      "roomImg": "https://picsum.photos/200/200",
+      "countryFlag": "https://cdn.glitch.global/ff635638-a414-4d00-8436-ba9e34e867e8/flag-160482_1280-1024x616.png?v=1663494925587",
+      "price": "1995",
+      "rating": "5",
+      "country": "Frankrike",
+      "routing-page": "/france",
+      "city": "Sweden"
+    }
+  ]
+  
