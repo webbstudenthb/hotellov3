@@ -1,75 +1,146 @@
 [
-    {
-      "id": "1",
-      "name": "Grand hotel Stockholm",
-      "hotelImg": "https://picsum.photos/300/160",
-      "roomImg": "https://picsum.photos/200/200",
-      "countryFlag": "https://cdn.glitch.global/ff635638-a414-4d00-8436-ba9e34e867e8/11a9a0b9370c8aafe215161a1c4d5f0b_swe-SE_90589.gif?v=1663494926971",
-      "price": "995",
-      "rating": "4.5",
-      "country": "Sweden",
-      "routing-page": "/sweden",
-      "city": "Sweden"
-    },
-    {
-      "id": "2",
-      "name": "Post hotel Gothenburg",
-      "hotelImg": "https://picsum.photos/300/161",
-      "roomImg": "https://picsum.photos/200/200",
-      "countryFlag": "https://cdn.glitch.global/ff635638-a414-4d00-8436-ba9e34e867e8/Flag_of_England.svg.png?v=1663494925638",
-      "price": "1395",
-      "rating": "2",
-      "country": "England",
-      "routing-page": "/england",
-      "city": "Sweden"
-    },
-    {
-      "id": "3",
-      "name": "Riviera hotel",
-      "hotelImg": "https://picsum.photos/300/163",
-      "roomImg": "https://picsum.photos/200/200",
-      "countryFlag": "https://cdn.glitch.global/ff635638-a414-4d00-8436-ba9e34e867e8/14b2d4d75b676cb53cf4950895de6726_swe-SE_90765.gif?v=1663494925915",
-      "price": "895",
-      "rating": "4",
-      "country": "Spanien",
-      "routing-page": "/spain",
-      "city": "Sweden"
-    },
-    {
-      "id": "4",
-      "name": "Scandic plaza",
-      "hotelImg": "https://picsum.photos/300/164",
-      "roomImg": "https://picsum.photos/200/200",
-      "countryFlag": "https://cdn.glitch.global/ff635638-a414-4d00-8436-ba9e34e867e8/11a9a0b9370c8aafe215161a1c4d5f0b_swe-SE_90589.gif?v=16634949269710",
-      "price": "1195",
-      "rating": "3.5",
-      "country": "Sweden",
-      "routing-page": "/sweden",
-      "city": "Italien"
-    },
-    {
-      "id": "4",
-      "name": "Scandic plaza",
-      "hotelImg": "https://picsum.photos/300/164",
-      "roomImg": "https://picsum.photos/200/200",
-      "countryFlag": "https://cdn.glitch.global/ff635638-a414-4d00-8436-ba9e34e867e8/11a9a0b9370c8aafe215161a1c4d5f0b_swe-SE_90589.gif?v=16634949269710",
-      "price": "1195",
-      "rating": "3.5",
-      "country": "Sweden",
-      "routing-page": "/sweden",
-      "city": "Italien"
-    },
-    {
-      "id": "5",
-      "name": "Marbella country club",
-      "hotelImg": "https://picsum.photos/300/165",
-      "roomImg": "https://picsum.photos/200/200",
-      "countryFlag": "https://cdn.glitch.global/ff635638-a414-4d00-8436-ba9e34e867e8/flag-160482_1280-1024x616.png?v=1663494925587",
-      "price": "1995",
-      "rating": "5",
-      "country": "Frankrike",
-      "routing-page": "/france",
-      "city": "Sweden"
-    }
+  {
+    "hotel_id": "1",
+    "hotel_tags": ["Endast vuxna", "Solsemester"],
+    "hotel_name": "Grand Hotell - Italiensk lyx",
+    "country": "Italien",
+    "county_flag": "",
+    "hotel_city": "Ancona",
+    "adress": "Via Marsala",
+    "hotel_phonenumber": "+39 0123 456 789",
+    "hotel_email": "",
+
+    "hotel_img": "",
+    "room_img": "",
+
+    "hotel_price": "1295",
+    "hotel_rating": "4",
+
+    "routing_page": "",
+
+    "hotel_icons": ["Trådlöst internet", "Restaurang", "Strand", "Poolområde", "Telefon", "Städning"], 
+
+    "info_check_in": "14:00 - 19:00",
+    "info_check_out": "13:00",
+    "info_cancellation": "Gratis avbokning 7 dagar innan",
+    "info_smooking": "Ej tillåtet",
+    "info_transfer": "Ingår inte",
+    "info_airport": "Pinelasa - PSN"
+  },
+
+  {
+    "hotel_id": "2",
+    "hotel_tags": ["Endast vuxna", "Familjehotell", "Barnvänligt", "Solsemester", "Vintersport"],
+    "hotel_name": "Sals ski resort - Österrikisk alpin",
+    "country": "Österrike",
+    "county_flag": "",
+    "hotel_city": "Hallstatt",
+    "adress": "Greenstraat 12",
+    "hotel_phonenumber": "+4390 876 543 321",
+    "hotel_email": "salsski@info.au",
+
+    "hotel_img": "",
+    "room_img": "",
+
+    "hotel_price": "1790",
+    "hotel_rating": "4",
+
+    "routing_page": "",
+
+    "hotel_icons": ["Trådlöst internet", "Restaurang", "Telefon", "Städning"], 
+
+    "info_check_in": "15.00",
+    "info_check_out": "11.00",
+    "info_cancellation": "Gratis avbokning 48 timmar innan",
+    "info_smooking": "Ej tillåtet",
+    "info_transfer": "Ingår",
+  },
+
+  {
+    "hotel_id": "3",
+    "hotel_tags": [ "Familjehotell", "Barnvänligt", "Solsemester" ],
+    "hotel_name": "Sunset hotel - Kurreklubben",
+    "country": "Spanien",
+    "county_flag": "",
+    "hotel_city": "Cala Figuera",
+    "adress": "Carrer Tomarinar",
+    "hotel_phonenumber": "+349087654321",
+    "hotel_email": "sunset@hotel.es",
+
+    "hotel_img": "",
+    "room_img": "",
+
+    "hotel_price": "1299",
+    "hotel_rating": "5",
+
+    "routing_page": "",
+
+    "hotel_icons": ["Trådlöst internet", "Restaurang", "Strand", "Poolområde", "Städning"], 
+
+    "info_check_in": "13.00",
+    "info_check_out": "12.00",
+    "info_cancellation": "Gratis avbokning 24 timmar innan",
+    "info_smooking": "Ej tillåtet",
+    "info_transfer": "Ingår ej",
+    "info_airport": "Macha spain - MCA",
+  },
+
+  {
+    "hotel_id": "4",
+    "hotel_tags": ["Familjehotell", "Barnvänligt", "Solsemester"],
+    "hotel_name": "Blue Hotels - Charmigt badparadis",
+    "country": "Grekland",
+    "county_flag": "",
+    "hotel_city": "Oía",
+    "adress": "Nik. Nomikou",
+    "hotel_phonenumber": "+30 0123 456 789",
+    "hotel_email": "",
+
+    "hotel_img": "",
+    "room_img": "",
+
+    "hotel_price": "1195",
+    "hotel_rating": "3",
+
+    "routing_page": "",
+
+    "hotel_icons": ["Trådlöst internet", "Restaurang", "Poolområde", "Städning"], 
+
+    "info_check_in": "14:00",
+    "info_check_out": "11:00",
+    "info_cancellation": "Gratis avbokning 24 timmar innan",
+    "info_smooking": "Ej tillåtet",
+    "info_transfer": "Ingår i priset",
+    "info_airport": "Trankolo - TRK"
+  },
+
+  {
+    "hotel_id": "5",
+    "hotel_tags": ["Familjehotell", "Barnvänligt", "Vintersemester"],
+    "hotel_name": "Högvallen fjällhotell",
+    "country": "Sverige",
+    "county_flag": "",
+    "hotel_city": "Östersund",
+    "adress": "Storgatan",
+    "hotel_phonenumber": "+46 0123 456 789",
+    "hotel_email": "",
+
+    "hotel_img": "",
+    "room_img": "",
+
+    "hotel_price": "1995",
+    "hotel_rating": "5",
+
+    "routing_page": "",
+
+    "hotel_icons": ["Trådlöst internet", "Restaurang", "Städning", "Telefon"], 
+
+    "info_check_in": "13:00",
+    "info_check_out": "12:00",
+    "info_cancellation": "Gratis avbokning 7 dagar innan",
+    "info_smooking": "Ej tillåtet",
+    "info_transfer": "Ingår i priset",
+    "info_airport": "Östersund centrala flygplats - OCF"
+  }
   ]
   
