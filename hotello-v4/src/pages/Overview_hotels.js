@@ -1,0 +1,1 @@
+//Filtrerad data för alla hotell enligtsearchbar

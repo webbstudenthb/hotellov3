@@ -1,10 +1,13 @@
 import './App.css';
+import Homepage from './pages/Homepage_page';
 
 function App() {
   return (
     <div className="App">
     
-        <h1>Här skall all kod ligga</h1>
+       
+
+        <Homepage></Homepage>
 
 
 
