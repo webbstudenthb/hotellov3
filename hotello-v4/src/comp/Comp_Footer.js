@@ -1,12 +1,8 @@
-
-
 const Footer = () => {
-    return ( 
-        <>
-          <h1>Footer</h1>
-        </>
-      
-     );
-}
- 
+  const year = new Date().getFullYear();
+
+  return <footer>{` © 2022 HOTELLO All rights reserved`}</footer>;
+};
+
 export default Footer;
+
