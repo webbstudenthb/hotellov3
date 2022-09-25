@@ -1,15 +1,20 @@
 
-
-
 function Header() {
     return (
-      <><h1>Hotello</h1>
-      
+      <>
+<header>  
+  <div className="topbar_darkslate"></div>
+  <h1>Hotello</h1>
+
+<nav>
       <ul>
         <li>Om oss</li>
         <li>Våra hotell</li>
         <li>Kontakt</li>
-      </ul></>
+      </ul>
+</nav>
+</header>
+      </>
     );
   }
  
