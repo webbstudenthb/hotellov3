@@ -11,6 +11,27 @@
   --stars: #FFB601;
 }
 
+
+
+/*General settings for fonts*/
+
+h1 {
+  font-size: 37px;
+  color: var(--primary);
+}
+h2 {
+  font-size: 29px;
+  color: var(--black);
+}
+h3 {
+  font-size: 22px;
+  color: var(--black);
+}
+p {
+  font-size: 16px;
+  color: var(--black);
+}
+
 /* Footer styling */
 
 .App {
@@ -20,14 +41,32 @@
 
 footer {
   position: fixed;
-  background-color: var(--primary);
+  height: 488px;
+  background-color: var(--whitesmoke);
   bottom: 0;
   left: 0;
   right: 0;
   padding: 8px;
   text-align: center;
-  color: var(--white);
+  color: var(--black);
+}
 
+.column {
+  float: left;
+  width: 25%;
+  list-style: none;
+}
+
+.column li h3 {
+  margin: 35px;
+}
+
+.copyright {
+  color: var(--black);
+}
+
+#contactInformation {
+  margin: 60px auto auto auto;
 }
 
 
@@ -48,27 +87,22 @@ li {
 
 .topbar_darkslate {
   height: 60px;
-  background-color: whitesmoke;
-  border: 1px solid #707070;
+  background-color: var(--whitesmoke);
 }
 
 header {
-  background-color: white;
+  background-color: var(--white);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  height: 170px;
-  
+  height: 170px; 
 }
 
 header h1 {
 text-transform: uppercase;
 position: fixed;
-color:#fb7d03;
+color:var(--primary);
 font-size: 2.5rem;
 margin: 20px auto auto 275px;
-
-
 }
-
 
 nav {
   display:flex;

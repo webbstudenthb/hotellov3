@@ -6,7 +6,7 @@ function Header() {
   <div className="topbar_darkslate"></div>
   <h1>Hotello</h1>
 
-<nav>
+<nav> <style></style>
       <ul>
         <li>Om oss</li>
         <li>Våra hotell</li>
@@ -19,4 +19,5 @@ function Header() {
   }
  
 export default Header;
+
 
