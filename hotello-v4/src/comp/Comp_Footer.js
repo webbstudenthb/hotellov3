@@ -29,9 +29,9 @@ function Footer() {
 
 <ul class="column">
   <li><h3>Kontakt</h3></li>
-  <li>Sverige</li>
-  <li>Högskolan i Borås</li>
-  <li>Allegatan 1, 50332 Borås</li>
+  <li><p class="address">Sverige <br></br>
+  Högskolan i Borås <br></br>
+  Allegatan 1, 50332 Borås</p></li>
   <li id="contactInformation">Alla hotell</li>
   <li>Integritetspolicy</li>
 </ul>
@@ -39,7 +39,7 @@ function Footer() {
 
 </div>
 
-<div class="copyright">© 2022 HOTELLO All rights reserved</div>
+{/* <div class="copyright">© 2022 HOTELLO All rights reserved</div> */}
     
 </footer>;
 </>

@@ -5,9 +5,7 @@ const Homepage = () => {
   return (
     <>
      <Header />
-
-     
-      <Footer />
+    <Footer />
      
     </>
   );

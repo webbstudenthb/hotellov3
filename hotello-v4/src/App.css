@@ -46,19 +46,28 @@ footer {
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 8px;
-  text-align: center;
   color: var(--black);
+  
 }
+
 
 .column {
   float: left;
-  width: 25%;
+  width: 20rem;
   list-style: none;
+  
+}
+
+.column li {
+  margin: 1rem auto auto auto;
 }
 
 .column li h3 {
-  margin: 35px;
+  margin: 3rem auto 1rem auto;
+}
+
+.column li h2 {
+  margin: 3rem auto 1rem auto;
 }
 
 .copyright {
@@ -71,16 +80,18 @@ footer {
 
 
 
+
+
 /*    HEADER    */
 /* General styling for the header component, including logo and nav.  */
 
-ul {
+header ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-li {
+header li {
   float: left;
   padding: 30px;
 }
@@ -104,7 +115,7 @@ font-size: 2.5rem;
 margin: 20px auto auto 275px;
 }
 
-nav {
+header nav {
   display:flex;
   justify-content:flex-end;
   margin-right: 354px;
