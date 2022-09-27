@@ -8,9 +8,9 @@ function Header() {
       <header>
         <div className="topbar_darkslate"></div>
 
-        <NavLink to="/">
+       
           <h1>Hotello</h1>
-        </NavLink>
+  
         <nav>
           <ul>
             <li> <Link to="#footer" smooth>Om oss</Link></li>
@@ -28,19 +28,3 @@ function Header() {
 }
 
 export default Header;
-
-
-
-{/* <NavLink to="/booking">Booking</NavLink>
-<NavLink to="/fokus">Fokus</NavLink>
-<NavLink to="/overview">Overview</NavLink> */}
-
-
-{/* <Link
-  to={{
-    pathname: "/courses",
-    search: "?sort=name",
-    hash: "#the-hash",
-    state: { fromDashboard: true }
-  }}
-/> */}
