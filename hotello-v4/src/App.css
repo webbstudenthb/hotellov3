@@ -96,18 +96,20 @@ nav {
   /* height sätts i inline-styling */
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  width: 100vw;
 }
 
 .HeroImg {
   grid-column-start: 1;
-  grid-column-end: 12;
+  grid-column-end: 13;
   grid-row-start: 1;
   grid-row-end: 4;
+  width: 100%;
 }
 
 .HeroSearch {
   grid-column-start: 3;
-  grid-column-end: 9;
+  grid-column-end: 10;
   grid-row-start: 3;
   grid-row-end: 3;
 }
@@ -121,7 +123,7 @@ nav {
 
 .HeroOverlay{
   grid-column-start: 1;
-  grid-column-end: 12;
+  grid-column-end: 13;
   grid-row-start: 1;
   grid-row-end: 4;
   background-color: rgba(0, 0, 0, 0.2);
@@ -132,10 +134,41 @@ nav {
 
 .Homecards_grid{
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 2fr 3fr;
+  gap: 16px;
+  padding-bottom: 16px;
 }
 
 .Homecard{
+  background-color: var(--whitesmoke);
+  border-radius: 24px;
 
-  background-color: #fb7d03;
+
+  padding: 24px;
+
+}
+
+.MainHome{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.MainHomeGridItems{
+  grid-column-start: 3;
+  grid-column-end: 11;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.Homecards_grid2{
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 16px;
+  
+}
+
+.border{
+  border: 2px;
+  border-color: var(--primary);
+  border-style: solid;
 }

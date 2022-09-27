@@ -13,7 +13,7 @@ function Header() {
         </NavLink>
         <nav>
           <ul>
-            <li> <Link to="#test2" smooth>Om oss</Link></li>
+            <li> <Link to="#footer" smooth>Om oss</Link></li>
             <li>
               <NavLink to="/all_hotels">Hotels</NavLink>
             </li>
