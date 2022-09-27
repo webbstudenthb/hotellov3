@@ -11,19 +11,23 @@
   --stars: #ffb601;
 }
 
+/*General settings for fonts*/
+
+h1 {
+  font-size: 37px;
+  color: var(--primary);
+}
+h2 {
+  font-size: 29px;
+  color: var(--black);
+}
+h3 {
+  font-size: 22px;
+  color: var(--black);
+}
 p {
-  font-family: "Roboto";
   font-size: 16px;
-}
-
-h1 {
-  font-family: "Roboto";
-  font-size: 32px;
-}
-
-h1 {
-  font-family: "Roboto";
-  font-size: 24px;
+  color: var(--black);
 }
 
 /* Footer styling */
@@ -35,55 +39,101 @@ h1 {
 
 footer {
   position: fixed;
-  background-color: var(--primary);
+  height: 488px;
+  background-color: var(--whitesmoke);
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 8px;
-  text-align: center;
-  color: var(--white);
+  color: var(--black);
+  
+}
+
+
+.column {
+  float: left;
+  width: 20rem;
+  list-style: none;
+  
+}
+
+.column li {
+  margin: 1rem auto auto auto;
+}
+
+.column li h3 {
+  margin: 3rem auto 1rem auto;
+}
+
+.column li h2 {
+  margin: 3rem auto 1rem auto;
+}
+
+.copyright {
+  color: var(--black);
+}
+
+#contactInformation {
+  margin: 60px auto auto auto;
 }
 
 /*    HEADER    */
 /* General styling for the header component, including logo and nav.  */
 
-ul {
+header ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-li {
+header li {
   float: left;
   padding: 30px;
 }
 
 .topbar_darkslate {
   height: 60px;
-  background-color: whitesmoke;
-  border: 1px solid #707070;
+  background-color: var(--whitesmoke);
 }
 
 header {
-  background-color: white;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  height: 170px;
+  background-color: var(--white);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  height: 170px; 
 }
 
 header h1 {
   text-transform: uppercase;
   position: fixed;
-  color: #fb7d03;
+  color:var(--primary);
   font-size: 2.5rem;
   margin: 20px auto auto 275px;
+  }
+  
+  header nav {
+    display:flex;
+    justify-content:flex-end;
+    margin-right: 354px;
+  }
+
+
+/*BUTTON*/
+/*General styling for the buttons*/
+
+button {
+  background-color: var(--primary);
+  border: none;
+  border-radius: 24px;
+  width: 10rem;
 }
 
-nav {
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 354px;
+button:hover {
+  background-color: var(--hover);
 }
+
+button p {
+  padding: 25px;
+}
+
 
 /* Searchbar CSS och Hero */
 .searchForm {
@@ -96,18 +146,20 @@ nav {
   /* height sätts i inline-styling */
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  width: 100vw;
 }
 
 .HeroImg {
   grid-column-start: 1;
-  grid-column-end: 12;
+  grid-column-end: 13;
   grid-row-start: 1;
   grid-row-end: 4;
+  width: 100%;
 }
 
 .HeroSearch {
   grid-column-start: 3;
-  grid-column-end: 9;
+  grid-column-end: 10;
   grid-row-start: 3;
   grid-row-end: 3;
 }
@@ -121,7 +173,7 @@ nav {
 
 .HeroOverlay{
   grid-column-start: 1;
-  grid-column-end: 12;
+  grid-column-end: 13;
   grid-row-start: 1;
   grid-row-end: 4;
   background-color: rgba(0, 0, 0, 0.2);
@@ -132,10 +184,41 @@ nav {
 
 .Homecards_grid{
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 2fr 3fr;
+  gap: 16px;
+  padding-bottom: 16px;
 }
 
 .Homecard{
+  background-color: var(--whitesmoke);
+  border-radius: 24px;
 
-  background-color: #fb7d03;
+
+  padding: 24px;
+
+}
+
+.MainHome{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.MainHomeGridItems{
+  grid-column-start: 3;
+  grid-column-end: 11;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.Homecards_grid2{
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 16px;
+  
+}
+
+.border{
+  border: 2px;
+  border-color: var(--primary);
+  border-style: solid;
 }
