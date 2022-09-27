@@ -3,16 +3,14 @@
 import Footer from "../comp/Comp_Footer";
 import Header from "../comp/Comp_Header";
 
-const Homepage = () => {
-  return (
+function All_hotels() {
+  return ( 
     <>
-     <Header />
+    <Header />
+    <h1>All hotel</h1>
+    <Footer />
+  </>
+   );
+}
 
-     
-      <Footer />
-     
-    </>
-  );
-};
-
-export default Homepage;
+export default All_hotels;
