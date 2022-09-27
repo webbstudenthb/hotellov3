@@ -3,12 +3,14 @@
 
 import Footer from "../comp/Comp_Footer";
 import Header from "../comp/Comp_Header";
+import Hero from "../comp/Comp_Hero"
 
-const Homepage = () => {
+const Booking= () => {
   return (
     <>
      <Header />
-
+     <Hero/>
+        <h2>booking</h2>
      
       <Footer />
      
@@ -16,7 +18,7 @@ const Homepage = () => {
   );
 };
 
-export default Homepage;
+export default Booking;
 
 
 
