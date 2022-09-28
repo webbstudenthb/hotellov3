@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
 }
@@ -8,10 +8,10 @@
   --black: #000000;
   --white: #ffffff;
   --whitesmoke: #f5f5f5;
-  --stars: #FFB601;
+  --border: #707070;
+  --stars: #ffb601;
+  --hover: #BB5F05;
 }
-
-
 
 /*General settings for fonts*/
 
@@ -40,23 +40,56 @@ p {
 }
 
 footer {
-  position: fixed;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  width: 100vw;
+  border-top: 1px solid var(--border);
+}
+
+footer {
   height: 488px;
-  background-color: var(--whitesmoke);
+  background-color: var(--white);
   bottom: 0;
   left: 0;
   right: 0;
   color: var(--black);
-  
 }
 
-
-.column {
-  float: left;
-  width: 20rem;
+li {
   list-style: none;
-  
 }
+
+
+footer .column1 {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 5;
+    grid-row-end: 8;
+    width: 100%;
+  }
+  footer .column2 {
+    grid-column-start: 6;
+    grid-column-end: 7;
+    grid-row-start: 5;
+    grid-row-end: 8;
+    width: 100%;
+  }
+  footer .column3 {
+    grid-column-start: 8;
+    grid-column-end: 9;
+    grid-row-start: 5;
+    grid-row-end: 8;
+    width: 100%;
+  }
+  footer .column4 {
+    grid-column-start: 10;
+    grid-column-end: 12;
+    grid-row-start: 5;
+    grid-row-end: 8;
+    width: 100%;
+  }
+
+  
 
 .column li {
   margin: 1rem auto auto auto;
@@ -70,53 +103,188 @@ footer {
   margin: 3rem auto 1rem auto;
 }
 
-.copyright {
-  color: var(--black);
-}
 
 #contactInformation {
   margin: 60px auto auto auto;
 }
 
+.copyright {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 10;
+  grid-row-end: auto;
+  width: 100%;
+  background-color: var(--primary);
+ 
+}
 
-
-
+.copyrightText {
+  margin-top: 1.5rem;
+  width: 100%;
+  text-align: center;
+  color: var(--white);
+}
 
 /*    HEADER    */
 /* General styling for the header component, including logo and nav.  */
+header {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-row-start: 1;
+  grid-row-end: 4;
+  width: 100vw;
+  
 
-header ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-header li {
-  float: left;
-  padding: 30px;
-}
+  background-color: var(--white);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  
+} 
 
 .topbar_darkslate {
-  height: 60px;
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  height: 5vh;
+  
   background-color: var(--whitesmoke);
 }
 
-header {
-  background-color: var(--white);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  height: 170px; 
-}
-
 header h1 {
-text-transform: uppercase;
-position: fixed;
-color:var(--primary);
-font-size: 2.5rem;
-margin: 20px auto auto 275px;
+  grid-column-start: 3;
+  grid-column-end: 6;
+  grid-row-start: 2;
+  grid-row-end: auto;
+  text-transform: uppercase;
+  color:var(--primary);
+  font-size: 2.5rem;
+  padding: 24px;
+  }
+  
+  header nav {
+    grid-column-start: 9;
+    grid-column-end: 12;
+  }
+
+header ul {
+  list-style-type: none;
 }
 
-header nav {
-  display:flex;
-  justify-content:flex-end;
-  margin-right: 354px;
+header li {
+  display: inline-block;
+  margin: 2.2rem 24px auto 32px;
+}
+
+li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+
+
+/*BUTTON*/
+/*General styling for the buttons*/
+
+button {
+  background-color: var(--primary);
+  border: none;
+  border-radius: 24px;
+  width: 10rem;
+}
+
+button:hover {
+  background-color: var(--hover);
+}
+
+button p {
+  color: var(--white);
+  padding: 25px;
+}
+
+
+/* Searchbar CSS och Hero */
+.searchForm {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  height: 130px;
+}
+
+.Hero {
+  /* height sätts i inline-styling */
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  width: 100vw;
+}
+
+.HeroImg {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 1;
+  grid-row-end: 4;
+  width: 100%;
+}
+
+.HeroSearch {
+  grid-column-start: 3;
+  grid-column-end: 10;
+  grid-row-start: 3;
+  grid-row-end: 3;
+}
+
+.HeroText{
+  grid-column-start: 3;
+  grid-column-end: 7;
+  grid-row-start: 2;
+  grid-row-end: 2;
+}
+
+.HeroOverlay{
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 1;
+  grid-row-end: 4;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Cards på startsidan */
+
+.Homecards_grid{
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 16px;
+  padding-bottom: 16px;
+}
+
+.Homecard{
+  background-color: var(--whitesmoke);
+  border-radius: 24px;
+
+
+  padding: 24px;
+
+}
+
+.MainHome{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.MainHomeGridItems{
+  grid-column-start: 3;
+  grid-column-end: 11;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.Homecards_grid2{
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 16px;
+  
+}
+
+.border{
+  border: 2px;
+  border-color: var(--primary);
+  border-style: solid;
 }

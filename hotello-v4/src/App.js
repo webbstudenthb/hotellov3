@@ -1,20 +1,13 @@
-import './App.css';
-import Homepage from './pages/Homepage_page';
-import Footer from "./comp/Comp_Footer";
+import "./App.css";
+import Routing from "./comp/Comp_Routing";
+
+
 function App() {
   return (
     <div className="App">
-    
-      
-        <Homepage></Homepage>
-        <Footer></Footer>
-
+      <Routing />
     </div>
-
-    
   );
 }
 
 export default App;
-
-

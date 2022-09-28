@@ -5,21 +5,18 @@ function Footer() {
 
 <footer>
 
-  <div class="row">
-
-
-<ul class="column">
-  <li><h2>HOTELLO</h2></li>
+<ul class="column1">
+  <li><h2 style={{color: '#fb7d03'}} >HOTELLO</h2></li>
   <p>Boka din semester på ett av våra underbara hotel. Vi har olika typer av rum för par, barnfamiljen och festmänniskorna</p>
 </ul>
 
-<ul class="column"> 
+<ul class="column2"> 
   <li><h3>Länkar</h3></li>
   <li>Alla hotell</li>
   <li>Integritetspolicy</li>
 </ul>
  
-<ul class="column">
+<ul class="column3">
   <li><h3>Resemål</h3></li>
   <li>Endast vuxna</li>
   <li>Familjehotell</li>
@@ -27,7 +24,7 @@ function Footer() {
   <li>Vintersport</li>
 </ul>
 
-<ul class="column">
+<ul class="column4">
   <li><h3>Kontakt</h3></li>
   <li><p class="address">Sverige <br></br>
   Högskolan i Borås <br></br>
@@ -36,14 +33,13 @@ function Footer() {
   <li>Integritetspolicy</li>
 </ul>
 
-
+<div class="copyright">
+<p class="copyrightText">© 2022 HOTELLO All rights reserver</p>  
 </div>
-
-{/* <div class="copyright">© 2022 HOTELLO All rights reserved</div> */}
     
-</footer>;
+</footer>
 </>
-  );
+  )
 }
 
 export default Footer;
