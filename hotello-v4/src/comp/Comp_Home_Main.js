@@ -1,5 +1,6 @@
 import Homecards from "./Comp_Home_cards";
 import Award from "./Comp_Home_award";
+import "../styles/main.css";
 
 function MainHome() {
     return ( 

@@ -1,6 +1,5 @@
-import { NavLink } from "react-router-dom";
 import { HashLink as Link} from "react-router-hash-link";
-
+import "../styles/headerFooter.css";
 
 function Footer() {
 

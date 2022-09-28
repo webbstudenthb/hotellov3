@@ -1,3 +1,5 @@
+import "../styles/homeCards.css";
+
 function Homecards() {
     return ( 
 
