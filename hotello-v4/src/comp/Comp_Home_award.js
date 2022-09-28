@@ -1,3 +1,5 @@
+import "../styles/award.css";
+
 function Award() {
   return (
     <>

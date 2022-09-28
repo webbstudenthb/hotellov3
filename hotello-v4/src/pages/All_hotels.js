@@ -2,12 +2,17 @@
 
 import Footer from "../comp/Comp_Footer";
 import Header from "../comp/Comp_Header";
+import HotelListCard from "../comp/Comp_Hotel_list_card";
+
+
 
 function All_hotels() {
   return ( 
     <>
     <Header />
-    <h1>All hotel</h1>
+    
+    <HotelListCard/>
+
     <Footer />
   </>
    );

@@ -1,4 +1,5 @@
 import Searchbar from "./Comp_Home_search_bar";
+import "../styles/hero.css";
 
 function Hero() {
   return (

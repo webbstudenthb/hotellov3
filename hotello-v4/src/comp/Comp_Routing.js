@@ -5,6 +5,7 @@ import Booking from "../pages/Booking_page"
 import Focus from "../pages/Focus_page"
 import Overview from "../pages/Overview_hotels"
 import Tim from "../pages/Tim";
+import "../styles/routing.css"
 
 
 function Routing() {

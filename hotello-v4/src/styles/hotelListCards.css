@@ -1,0 +1,35 @@
+.insideCardsGrid {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.insideImgCard {
+  background-color: aqua;
+  height: 504.43px;
+  width: 504.43px;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  align-self: center;
+  margin-left: 32px;
+  border-radius: 0px 24px 24px 24px;
+}
+
+.hotelListButton {
+  position: absolute;
+  right: 32px;
+  bottom: 32px;
+}
+
+
+.insideTextCard{
+    padding: 32px;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}

@@ -1,3 +1,5 @@
+import "../styles/searchbar.css";
+
 const Searchbar = () => {
   return (
     <>
