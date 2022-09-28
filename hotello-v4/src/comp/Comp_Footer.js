@@ -1,3 +1,7 @@
+import { NavLink } from "react-router-dom";
+import { HashLink as Link} from "react-router-hash-link";
+
+
 function Footer() {
 
   return (
@@ -6,8 +10,8 @@ function Footer() {
 <footer>
 
 <ul class="column1">
-  <li><h2 style={{color: '#fb7d03'}} >HOTELLO</h2></li>
-  <p>Boka din semester på ett av våra underbara hotel. Vi har olika typer av rum för par, barnfamiljen och festmänniskorna</p>
+  <li style={{textDecoration: 'none'}}><h2><Link className="h2Hotello"  to="/">Hotello</Link></h2></li>
+  <p id="aboutUs" >Boka din semester på ett av våra underbara hotel. Vi har olika typer av rum för par, barnfamiljen och festmänniskorna</p>
 </ul>
 
 <ul class="column2"> 

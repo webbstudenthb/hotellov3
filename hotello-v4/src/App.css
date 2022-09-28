@@ -101,6 +101,13 @@ footer .column1 {
 
 .column li h2 {
   margin: 3rem auto 1rem auto;
+
+}
+
+.h2Hotello {
+  color: var(--primary);
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 
