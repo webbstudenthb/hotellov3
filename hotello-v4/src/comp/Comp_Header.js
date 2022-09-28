@@ -9,15 +9,15 @@ function Header() {
         <div className="topbar_darkslate"></div>
 
        
-          <h1><NavLink style={{textDecoration: 'none', color: "#fb7d03"}} to="/Homepage_page">Hotello</NavLink></h1>
+          <h1><NavLink style={{textDecoration: 'none', color: "#fb7d03"}} to="/">Hotello</NavLink></h1>
   
         <nav>
           <ul>
-            <li> <Link style={{textDecoration: 'none', color: "black"}}  to="#footer" smooth>Om oss</Link></li>
+            <li> <Link style={{textDecoration: 'none', color: "black"}}  to="#aboutUs" smooth>Om oss</Link></li>
             <li>
-              <NavLink style={{textDecoration: 'none', color: "black"}}  to="/all_hotels">Hotels</NavLink>
+              <NavLink style={{textDecoration: 'none', color: "black"}}  to="/all_hotels">Våra hotell</NavLink>
             </li>
-            <li> <Link style={{textDecoration: 'none', color: "black"}} to="#test" smooth>Kontakt</Link></li>
+            <li> <Link style={{textDecoration: 'none', color: "black"}} to="#contactInformation" smooth>Kontakt</Link></li>
           </ul>
         </nav>
       </header>
