@@ -8,7 +8,9 @@
   --black: #000000;
   --white: #ffffff;
   --whitesmoke: #f5f5f5;
+  --border: #707070;
   --stars: #ffb601;
+  --hover: #BB5F05;
 }
 
 /*General settings for fonts*/
@@ -38,23 +40,56 @@ p {
 }
 
 footer {
-  position: fixed;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  width: 100vw;
+  border-top: 1px solid var(--border);
+}
+
+footer {
   height: 488px;
-  background-color: var(--whitesmoke);
+  background-color: var(--white);
   bottom: 0;
   left: 0;
   right: 0;
   color: var(--black);
-  
 }
 
-
-.column {
-  float: left;
-  width: 20rem;
+li {
   list-style: none;
-  
 }
+
+
+footer .column1 {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 5;
+    grid-row-end: 8;
+    width: 100%;
+  }
+  footer .column2 {
+    grid-column-start: 6;
+    grid-column-end: 7;
+    grid-row-start: 5;
+    grid-row-end: 8;
+    width: 100%;
+  }
+  footer .column3 {
+    grid-column-start: 8;
+    grid-column-end: 9;
+    grid-row-start: 5;
+    grid-row-end: 8;
+    width: 100%;
+  }
+  footer .column4 {
+    grid-column-start: 10;
+    grid-column-end: 12;
+    grid-row-start: 5;
+    grid-row-end: 8;
+    width: 100%;
+  }
+
+  
 
 .column li {
   margin: 1rem auto auto auto;
@@ -68,12 +103,26 @@ footer {
   margin: 3rem auto 1rem auto;
 }
 
-.copyright {
-  color: var(--black);
-}
 
 #contactInformation {
   margin: 60px auto auto auto;
+}
+
+.copyright {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 10;
+  grid-row-end: auto;
+  width: 100%;
+  background-color: var(--primary);
+ 
+}
+
+.copyrightText {
+  margin-top: 1.5rem;
+  width: 100%;
+  text-align: center;
+  color: var(--white);
 }
 
 /*    HEADER    */
@@ -103,7 +152,6 @@ header {
 
 header h1 {
   text-transform: uppercase;
-  position: fixed;
   color:var(--primary);
   font-size: 2.5rem;
   margin: 20px auto auto 275px;
