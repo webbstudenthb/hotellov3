@@ -50,10 +50,7 @@ function HotelListCard() {
                   mysiga hotellrum.
                 </p>
 
-                  
-         
-
-                  <div className="iconBoxWrapper">
+                <div className="iconBoxWrapper">
                   <div className="iconImgBox">
                     <IconRestaurant />
                   </div>
@@ -93,26 +90,19 @@ function HotelListCard() {
                   <div className="iconTextBox">
                     <p>WiFi</p>
                   </div>
-
-                  
                 </div>
-
-
-
               </div>
 
               <div className="hotelListPriceButtonWrapper">
-              <div className="hotelListPrice">
-                  <p style={{textAlign: "end"}}>Pris från</p>
-                  <h2 style={{textAlign: "end"}}>1290 SEK</h2>
-              </div>
-              <div >
-                <Button />
+                <div className="hotelListPrice">
+                  <p style={{ textAlign: "end" }}>Pris från</p>
+                  <h2 style={{ textAlign: "end" }}>1290 SEK</h2>
+                </div>
+                <div>
+                  <Button />
+                </div>
               </div>
 
-              </div>
-
-           
               <div className="hotelListFlag">
                 <img
                   style={{
@@ -127,9 +117,6 @@ function HotelListCard() {
             </div>
           </div>
 
-          <div style={{ height: "100vh", backgroundColor: "lightcyan" }}>
-            <p>Placeholder</p>
-          </div>
         </div>
       </div>
     </>
