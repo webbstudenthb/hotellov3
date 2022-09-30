@@ -3,15 +3,14 @@
   height: 100%;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(12, 1fr);
 }
 
 .insideImgCard {
-  background-color: aqua;
   height: 504.43px;
   width: 504.43px;
   grid-column-start: 1;
-  grid-column-end: 1;
+  grid-column-end: 5;
   grid-row-start: 1;
   grid-row-end: 3;
   align-self: center;
@@ -19,17 +18,57 @@
   border-radius: 0px 24px 24px 24px;
 }
 
-.hotelListButton {
+.hotelListPriceButtonWrapper{
   position: absolute;
   right: 32px;
   bottom: 32px;
 }
 
+.hotelListPrice{
+  margin-bottom: 24px;
+}
 
 .insideTextCard{
     padding: 32px;
-    grid-column-start: 2;
-    grid-column-end: 2;
+    grid-column-start: 5;
+    grid-column-end: 11;
     grid-row-start: 1;
     grid-row-end: 3;
+}
+
+.hotelListFlag{
+  border-radius: 100%;
+  background-color: antiquewhite;
+  height: 41.89px; 
+  width: 41.89px;
+  position: absolute;
+  right: 32px;
+  top: 32px;
+}
+
+.iconTextBox{
+  display: flex;
+
+  height: 100%;
+  align-items: center;
+  font-weight: bold;
+  padding-top: 10px;
+
+
+ 
+}
+
+
+.iconImgBox{
+  display: flex;
+  height: 100%;
+  padding-top: 10px;
+ 
+}
+
+
+.iconBoxWrapper{
+  display: grid;
+  grid-template-columns: 41.89px auto 41.89px auto;
+ 
 }
