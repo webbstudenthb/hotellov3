@@ -11,7 +11,6 @@ function Header() {
 
        
           <h1><NavLink style={{textDecoration: 'none', color: "#fb7d03"}} to="/">Hotello</NavLink></h1>
-  
         <nav>
           <ul>
             <li> <Link style={{textDecoration: 'none', color: "black"}}  to="#aboutUs" smooth>Om oss</Link></li>

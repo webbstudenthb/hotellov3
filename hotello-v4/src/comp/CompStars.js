@@ -1,12 +1,16 @@
 
+import React, { Component } from 'react';
 import HotelData from "../hoteldata.json";
 
+class StarRating extends Component {
+  constructor(props) {
+      super(props);
+  }
 
-
-function StarRating() {
-  return (
-    HotelData.map
-  );
+  render() {
+      return (<div>{JSON.stringify(HotelData.hotel_rating)}</div>
+      );
+  }
 }
 
 export default StarRating;

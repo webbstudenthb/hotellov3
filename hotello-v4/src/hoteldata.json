@@ -14,7 +14,13 @@
     "hotel_price": "1295",
     "hotel_rating": "4",
     "routing_page": "",
+
+
+    "hotel_icons": ["https://cdn.glitch.global/b8bfc950-5347-4077-bd94-1e2db9ffd2ee/Star.svg?v=1664379295785", "Restaurang", "Strand", "Poolområde", "Telefon", "Städning"], 
+
+
     "hotel_icons": ["Trådlöst internet", "Restaurang", "Strand", "Poolområde", "Telefon", "Städning"], 
+
     "info_check_in": "14:00 - 19:00",
     "info_check_out": "13:00",
     "info_cancellation": "Gratis avbokning 7 dagar innan",
