@@ -9,16 +9,17 @@
     "adress": "Via Marsala",
     "hotel_phonenumber": "+39 0123 456 789",
     "hotel_email": "",
-
     "hotel_img": "",
     "room_img": "",
-
     "hotel_price": "1295",
     "hotel_rating": "4",
-
     "routing_page": "",
 
+
     "hotel_icons": ["https://cdn.glitch.global/b8bfc950-5347-4077-bd94-1e2db9ffd2ee/Star.svg?v=1664379295785", "Restaurang", "Strand", "Poolområde", "Telefon", "Städning"], 
+
+
+    "hotel_icons": ["Trådlöst internet", "Restaurang", "Strand", "Poolområde", "Telefon", "Städning"], 
 
     "info_check_in": "14:00 - 19:00",
     "info_check_out": "13:00",
@@ -38,17 +39,12 @@
     "adress": "Greenstraat 12",
     "hotel_phonenumber": "+4390 876 543 321",
     "hotel_email": "salsski@info.au",
-
     "hotel_img": "",
     "room_img": "",
-
     "hotel_price": "1790",
     "hotel_rating": "4",
-
     "routing_page": "",
-
     "hotel_icons": ["Trådlöst internet", "Restaurang", "Telefon", "Städning"], 
-
     "info_check_in": "15.00",
     "info_check_out": "11.00",
     "info_cancellation": "Gratis avbokning 48 timmar innan",
@@ -66,17 +62,12 @@
     "adress": "Carrer Tomarinar",
     "hotel_phonenumber": "+349087654321",
     "hotel_email": "sunset@hotel.es",
-
     "hotel_img": "",
     "room_img": "",
-
     "hotel_price": "1299",
     "hotel_rating": "5",
-
     "routing_page": "",
-
     "hotel_icons": ["Trådlöst internet", "Restaurang", "Strand", "Poolområde", "Städning"], 
-
     "info_check_in": "13.00",
     "info_check_out": "12.00",
     "info_cancellation": "Gratis avbokning 24 timmar innan",
@@ -95,17 +86,12 @@
     "adress": "Nik. Nomikou",
     "hotel_phonenumber": "+30 0123 456 789",
     "hotel_email": "",
-
     "hotel_img": "",
     "room_img": "",
-
     "hotel_price": "1195",
     "hotel_rating": "3",
-
     "routing_page": "",
-
     "hotel_icons": ["Trådlöst internet", "Restaurang", "Poolområde", "Städning"], 
-
     "info_check_in": "14:00",
     "info_check_out": "11:00",
     "info_cancellation": "Gratis avbokning 24 timmar innan",
@@ -124,17 +110,12 @@
     "adress": "Storgatan",
     "hotel_phonenumber": "+46 0123 456 789",
     "hotel_email": "",
-
     "hotel_img": "",
     "room_img": "",
-
     "hotel_price": "1995",
     "hotel_rating": "5",
-
     "routing_page": "",
-
     "hotel_icons": ["Trådlöst internet", "Restaurang", "Städning", "Telefon"], 
-
     "info_check_in": "13:00",
     "info_check_out": "12:00",
     "info_cancellation": "Gratis avbokning 7 dagar innan",
