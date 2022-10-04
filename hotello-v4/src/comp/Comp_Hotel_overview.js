@@ -1,8 +1,5 @@
 
 import "../styles/hotelOverview.css";
-
-
-
 import { NavLink } from "react-router-dom";
 import "../styles/bookingOverview.css";
 

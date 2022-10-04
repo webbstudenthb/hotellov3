@@ -1,18 +1,26 @@
 import "../styles/bookingForm.css";
 
-function bookingForm() {
+function BookingForm() {
     return ( 
+  
+
+
         <>
-            <h3>Bokningsinformation</h3>    
-            <div className="bookingFormBox">
-                    <form>
+        <div className="MainHome">
+          <div className="MainHomeGridItems">
+   
+          <h3>Bokningsinformation</h3>    
+             <div className="bookingFormBox">
+                     <form>
                        
                
-                        <input type="text" />
-                    </form>
-            </div>
-        </>
+                         <input type="text" />
+                     </form>
+             </div>
+          </div>
+        </div>
+      </>
      );
 }
 
-export default bookingForm;
+export default BookingForm;
