@@ -1,0 +1,12 @@
+
+.MainHomeGridItems-Payment_Booking{
+    grid-column-start: 8;
+    grid-column-end: 11;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    width: 100%;
+    height: 100%;
+    background-color: var(--whitesmoke);
+    border-radius: 24px;
+    padding: 24px;
+}
