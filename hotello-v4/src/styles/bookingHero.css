@@ -1,0 +1,14 @@
+.BookingHero {
+    /* height sätts i inline-styling */
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    width: 100vw;
+  }
+  
+  .BookingHeroImg {
+    grid-column-start: 1;
+    grid-column-end: 13;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    width: 100%;
+  }
