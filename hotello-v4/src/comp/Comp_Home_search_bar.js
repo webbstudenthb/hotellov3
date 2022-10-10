@@ -1,43 +1,9 @@
 import "../styles/searchbar.css";
+import Calender from "./Comp_Calender";
 
 const Searchbar = () => {
   return (
     <>
-      <div
-        style={{
-          width: "177.42px",
-          height: "67.77px",
-          backgroundColor: "#f5f5f5",
-          display: "inline-block",
-          borderRadius: "24px 0px 0px 0px",
-        }}
-      >
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            height: "100%",
-          }}
-        >
-          <p style={{ color: "black", alignSelf: "center" }}>Sommar</p>
-        </div>
-      </div>
-      <div
-        style={{
-          width: "177.42px",
-          height: "67.77px",
-          backgroundColor: "#FB7D03",
-          display: "inline-block",
-          borderRadius: "0px 24px 0px 0px",
-        }}
-      >
-        <div
-          style={{ height: "100%", display: "flex", justifyContent: "center" }}
-        >
-          <p style={{ color: "white", alignSelf: "center" }}>Vinter</p>
-        </div>
-      </div>
       <div
         style={{
           maxWidth: "1095px",
@@ -59,16 +25,15 @@ const Searchbar = () => {
         ----------------------------------------------------------------------------------- */}
 
           <div className="grid1">
-            <div   style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  height: "130px"
-           
-                }}>
-              <div
-                className="locationChooser"
-              >
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                height: "130px",
+              }}
+            >
+              <div className="locationChooser">
                 <div className="up_form">
                   <img
                     style={{ height: "24px", paddingRight: "8px" }}
@@ -78,18 +43,18 @@ const Searchbar = () => {
 
                   <select style={{ border: 0, backgroundColor: "#f7f7f7" }}>
                     <option selected value="location">
-                      Plats
+                      Sverige
                     </option>
-                    <option value="grapefruit">Grapefruit</option>
-                    <option value="lime">Lime</option>
+                    <option value="Spanien">Spanien</option>
+                    <option value="England">England</option>
 
-                    <option value="mango">Mango</option>
+                    <option value="Italien">Italien</option>
                   </select>
                 </div>
 
                 <div className="down_form">
                   <div className="location">
-                    <p style={{fontWeight: "bold"}}>Spanien</p>
+                    <p style={{ fontWeight: "bold" }}>Välj land</p>
                   </div>
                 </div>
               </div>
@@ -105,35 +70,26 @@ const Searchbar = () => {
         ---------------------------------------------------------------------------------------
         ---------------------------------------------------------------------------------------
         ----------------------------------------------------------------------------------- */}
-
           <div className="grid2">
-            <div>
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  height: "130px",
-                }}
-                className="locationChooser"
-              >
-                <img
-                  style={{ height: "24px", paddingRight: "8px" }}
-                  src="https://cdn.glitch.global/b8bfc950-5347-4077-bd94-1e2db9ffd2ee/calendar3.svg?v=1664196888370"
-                  alt="location icon"
-                />
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                height: "130px",
+              }}
+            >
+              <div className="locationChooser">
+                <div className="up_form">
+                  <Calender />
+                </div>
 
-                <select style={{ border: 0, backgroundColor: "#f7f7f7" }}>
-                  <option selected value="location">
-                    Datum
-                  </option>
-                  <option value="1">1 rum</option>
-                  <option value="2">2 rum</option>
-
-                  <option value="3">3 rum</option>
-                </select>
+                <div className="down_form">
+                  <div className="location">
+                    <p style={{ fontWeight: "bold" }}>Incheckningsdatum</p>
+                  </div>
+                </div>
               </div>
-              <div className="location"></div>
             </div>
           </div>
 
@@ -148,33 +104,37 @@ const Searchbar = () => {
         --------------------------------------------------------------------------------------- */}
 
           <div className="grid3">
-            <div>
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  height: "130px",
-                }}
-                className="locationChooser"
-              >
-                <img
-                  style={{ height: "24px", paddingRight: "8px" }}
-                  src="https://cdn.glitch.global/b8bfc950-5347-4077-bd94-1e2db9ffd2ee/person-plus%20(1).svg?v=1664197036235"
-                  alt="location icon"
-                />
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                height: "130px",
+              }}
+            >
+              <div className="locationChooser">
+                <div className="up_form">
+                  <img
+                    style={{ height: "24px", paddingRight: "8px" }}
+                    src="https://cdn.glitch.global/b8bfc950-5347-4077-bd94-1e2db9ffd2ee/person-plus%20(1).svg?v=1664197036235"
+                    alt="location icon"
+                  />
 
-                <select style={{ border: 0, backgroundColor: "#f7f7f7" }}>
-                  <option selected value="location">
-                    Antal rum
-                  </option>
-                  <option value="1">1 rum</option>
-                  <option value="2">2 rum</option>
-                  <option value="3">3 rum</option>
-                  <option value="4">4 rum</option>
-                </select>
+                  <select style={{ border: 0, backgroundColor: "#f7f7f7" }}>
+                    <option value="1">1 person</option>
+                    <option value="2">2 personer</option>
+                    <option value="3">3 personer</option>
+
+                    <option value="4">4 personer</option>
+                  </select>
+                </div>
+
+                <div className="down_form">
+                  <div className="location">
+                    <p style={{ fontWeight: "bold" }}>Antal personer</p>
+                  </div>
+                </div>
               </div>
-              <div className="location"></div>
             </div>
           </div>
 
@@ -205,7 +165,7 @@ const Searchbar = () => {
                 borderRadius: "24px 24px 24px 24px",
                 border: "none",
                 color: "white",
-                fontSize: "16px"
+                fontSize: "16px",
               }}
             >
               Sök

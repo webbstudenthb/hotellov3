@@ -1,0 +1,17 @@
+.calenderForm {
+  display: inline-block;
+}
+
+.calenderFormImg {
+  display: inline-block;
+}
+
+.innerCalenderForm {
+  background-color: #f5f5f5;
+  border: none;
+  width: 100px;
+}
+
+.calenderArrow{
+    display: inline-block;
+}
