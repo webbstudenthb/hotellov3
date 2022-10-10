@@ -1,34 +1,38 @@
-// import { useState } from "react";
-// import { DateRange } from "react-date-range";
-// import "react-date-range/dist/styles.css"; // main css file
-// import "react-date-range/dist/theme/default.css"; // theme css file
+import React, { useState } from "react";
+import DatePicker from "react-datepicker";
+import "../styles/calender.css";
+import "react-datepicker/dist/react-datepicker.css";
 
-// function Calender() {
-//   const [calender, setCalender] = useState([
-//     {
-//       startDate: new Date(),
-//       endDate: null,
-//       key: "selection",
-//       color: "red",
-//     },
-//   ]);
+const Calender = () => {
+  const [startDate, setStartDate] = useState(new Date());
 
-//   const handleSelect = (date) => {
-//     setCalender(format(date, "MM/dd/yyy"));
-//   };
+  return (
+    <>
+      <div className="calenderFormImg">
+        <img
+          style={{ height: "24px", paddingRight: "8px" }}
+          src="https://cdn.glitch.global/b8bfc950-5347-4077-bd94-1e2db9ffd2ee/calendar3.svg?v=1664196888370"
+          alt="location icon"
+        />
+      </div>
+      <div className="calenderForm">
+        <DatePicker
+          className="innerCalenderForm"
+          placeholderText={'Please select a date'} 
+          selected={startDate}
+          onChange={(date: Date) => setStartDate(date)}
+        ></DatePicker>
+      </div>
 
-//   return (
-//     <>
-//       <input value={calender} readOnly />
+        <div className="calenderArrow">
+            <img
+            style={{ height: "14px" }}
+            src="https://cdn.glitch.global/b8bfc950-5347-4077-bd94-1e2db9ffd2ee/angle-down-solid.svg?v=1665407644925"
+            alt="pil neråt"
+            />
+        </div>
+    </>
+  );
+};
 
-//       <DateRange
-//         editableDateInputs={true}
-//         onChange={(item) => setState([item.selection])}
-//         moveRangeOnFirstSelection={false}
-//         ranges={state}
-//       />
-//     </>
-//   );
-// }
-
-// export default Calender;
+export default Calender;

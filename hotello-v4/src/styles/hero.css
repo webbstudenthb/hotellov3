@@ -1,0 +1,38 @@
+
+.Hero {
+    /* height sätts i inline-styling */
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    width: 100vw;
+  }
+  
+  .HeroImg {
+    grid-column-start: 1;
+    grid-column-end: 13;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    width: 100%;
+  }
+  
+  .HeroSearch {
+    grid-column-start: 3;
+    grid-column-end: 10;
+    grid-row-start: 3;
+    grid-row-end: 3;
+  }
+  
+  .HeroText{
+    grid-column-start: 3;
+    grid-column-end: 7;
+    grid-row-start: 2;
+    grid-row-end: 2;
+  }
+  
+  .HeroOverlay{
+    grid-column-start: 1;
+    grid-column-end: 13;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  

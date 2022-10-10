@@ -1,0 +1,10 @@
+
+/* Searchbar CSS och Hero */
+.searchForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    height: 130px;
+  }
+  
+
+
