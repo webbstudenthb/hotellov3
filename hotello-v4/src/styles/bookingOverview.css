@@ -33,48 +33,82 @@
   }
 
 
+  /*OVERVIEW HOTEL GENERAL SETTINGS*/
+
 div .HotelOverviewMain {
     display: grid;
     grid-column-gap: 1rem;
     grid-row-gap: 1rem;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(24, 1fr);
     margin-bottom: 1rem;
 }
 
+.iconsForHotel img {
+  background-color: var(--black);
+  border-radius: 50%;
+  padding: 5px;
+  height: 2rem;
+  width: 2rem;
+}
+
 .OverviewBox {
-    grid-column-start: 3;
-    grid-column-end: 8;
-    grid-row-start: 1;
-    grid-row-end: 10;
+    grid-column-start: 6;
+    grid-column-end: 16;
+    grid-row-start: 2;
+    grid-row-end: 20;
     background-color: var(--whitesmoke);
     border-radius: 24px;
-    padding: 24px;
-
-    
+    padding: 24px;  
 }
-
-h2  {
-    grid-column-start: 2;
-    grid-column-end: 6;
-}
-
 
 .HotelInfoSummary {
     
-    grid-column-start: 8;
-    grid-column-end: 11;
-    grid-row-start: 1;
-    grid-row-end: 15;
-    border-radius: 24px;
+  grid-column-start: 16;
+  grid-column-end: 22;
+  grid-row-start: 2;
+  grid-row-end: 21;
+  border-radius: 24px;
 
-    background-color: var(--whitesmoke);
+  background-color: var(--whitesmoke);
 }
 
 .HeaderSummary {
-    padding: 24px;
+  padding: 24px;
 }
 
 .HotelInfoSummary li {
-    text-decoration: none;
-    cursor: default;
+  text-decoration: none;
+  padding-top: 21px;
 }
+
+.priceFrom {
+  grid-column-start: 19;
+  grid-column-end: 22;
+  grid-row-start: 20;
+  grid-row-end: 21;
+  margin: 10.5rem auto auto 12rem;
+
+}
+
+
+.winterSport {
+  background-color: var(--whitesmoke);
+  border-radius: 24px;
+  grid-column-start: 6;
+  grid-column-end: 11;
+  grid-row-start: 20;
+  grid-row-end: 21;
+  padding: 24px;
+
+}
+
+.summerVacation {
+  background-color: var(--whitesmoke);
+  border-radius: 24px;
+  grid-column-start: 11;
+  grid-column-end: 16;
+  grid-row-start: 20;
+  grid-row-end: 21;
+  padding: 24px;
+}
+
