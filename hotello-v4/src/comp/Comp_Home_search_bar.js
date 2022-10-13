@@ -1,6 +1,10 @@
 import "../styles/searchbar.css";
 import Calender from "./Comp_Calender";
 
+import Form from "react-bootstrap/Form";
+import InputGroup from "react-bootstrap/InputGroup";
+import Button from "react-bootstrap/Button";
+
 const Searchbar = () => {
   return (
     <>
@@ -35,13 +39,13 @@ const Searchbar = () => {
             >
               <div className="locationChooser">
                 <div className="up_form">
-                  <img
+                  {/* <img
                     style={{ height: "24px", paddingRight: "8px" }}
                     src="https://cdn.glitch.global/b8bfc950-5347-4077-bd94-1e2db9ffd2ee/geo-alt.svg?v=1664196942706"
                     alt="location icon"
-                  />
+                  /> */}
 
-                  <select style={{ border: 0, backgroundColor: "#f7f7f7" }}>
+                  {/* <select style={{ border: 0, backgroundColor: "#f7f7f7" }}>
                     <option selected value="location">
                       Sverige
                     </option>
@@ -49,12 +53,27 @@ const Searchbar = () => {
                     <option value="England">England</option>
 
                     <option value="Italien">Italien</option>
-                  </select>
+                  </select> */}
+
+                  <InputGroup>
+                    <Form.Control
+                      style={{
+                        color: "black",
+                        backgroundColor: "#f5f5f5",
+                        border: "none",
+                        textAlign: "start"
+                      }}
+                      placeholder="Check-in?"
+                      type="date"
+                      aria-label="Username"
+                      aria-describedby="basic-addon1"
+                    />
+                  </InputGroup>
                 </div>
 
                 <div className="down_form">
                   <div className="location">
-                    <p style={{ fontWeight: "bold" }}>Välj land</p>
+                    <p style={{ fontWeight: "bold", marginLeft: "10px"}}>Välj land</p>
                   </div>
                 </div>
               </div>
