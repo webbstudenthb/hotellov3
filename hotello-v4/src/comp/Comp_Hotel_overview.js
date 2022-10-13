@@ -2,6 +2,7 @@
 import "../styles/hotelOverview.css";
 import { NavLink } from "react-router-dom";
 import "../styles/bookingOverview.css";
+import Button from "../comp/Comp_Button";
 
 {/** Hämta info från Hotell-array samt userstate*/}
 
@@ -16,12 +17,23 @@ function HotelOverview() {
 
 
             <div className="OverviewBox">
-                    <h2 className="OverviewHotelName">{/**JS till Array */}Sunset Hotel - Kurreklubben</h2>
+                
+                
+                    <h2 className="OverviewHotelName">{/**JS till Array */}Sunset Hotel - Kurreklubben
+                    <img style={{height: "2rem", margin: "-1rem auto auto 2rem"}} className="starsForHotel"
+                     src="https://cdn.glitch.global/b8bfc950-5347-4077-bd94-1e2db9ffd2ee/Star.svg?v=1664379295785" alt="Stjärna" />
+                     </h2>
+                    <div className="starsForHotel"> 
+                    
+            
+                     {/** Skriva ut antal stjärnor för valt hotell från array*/}
 
-                        {/** Skriva ut antal stjärnor för valt hotell*/}
-                         
-                        {/**Skriva ut ikoner för valt hotell */}
-                <p>{/**JS till Array */}Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                       
+                       <div className="iconsForHotel"> <img style={{margin: "1rem"}} src="https://cdn.glitch.global/b8bfc950-5347-4077-bd94-1e2db9ffd2ee/wifi-solid.svg?v=1664459875956" alt="Ikon för trådlöst internet" /></div>
+                       {/**Skriva ut ikoner för valt hotell */}
+                
+                
+                      <p>{/**JS till Array */}Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                      sed do eiusmod tempor incididunt ut labore et dolore 
                      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                       ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
@@ -42,15 +54,49 @@ function HotelOverview() {
                         
                             
             </div>
+            </div>
             <div className="HotelInfoSummary">
             <h3 className="HeaderSummary">Bra att veta:</h3>
             <ul>
                 <li>Incheckning:</li>
                 <li>Utcheckning:</li>
+                <li>Städning:</li>
+                <li>Frukost:</li>
+                <li>Rökning:</li>
+                <li>Transfer:</li>
+                <li>Närmaste flygplats:</li>
                 <li>Avbokning:</li>
-                <li>Rökning</li>
             </ul>
+            <div className="priceFrom">
+
+                <p style={{margin: "auto auto -10px 1rem"}}>pris från:</p>
+                <h1 style={{color: "black"}}>
+                    1295 kr</h1>
+            <div className="buttons">
+            <Button style={{margin: "100px"}}/>
+            </div>
+            </div>
          </div>
+         <div className="winterSport">
+            <h2
+            style={{margin: "21px"}}>
+                Vintersport</h2>
+            <img 
+            style={{height: "136px", width: "100%",   objectFit: "cover", borderRadius: "0px 24px 24px 24px"}}
+            src="https://cdn.glitch.global/b8bfc950-5347-4077-bd94-1e2db9ffd2ee/austria-salzburg-young-couple-skiing-on-mountain-2022-03-08-01-22-33-utc.jpeg?v=1664265142680">
+                
+            </img>
+            </div>
+         <div className="summerVacation">
+            <h2 
+            style={{margin: "21px"}}>
+            Solsemester</h2>
+            <img 
+            style={{height: "136px", width: "100%",   objectFit: "cover", borderRadius: "0px 24px 24px 24px"}}
+            src="https://cdn.glitch.me/b8bfc950-5347-4077-bd94-1e2db9ffd2ee/woman-in-bikini-on-beach-2022-02-02-03-49-15-utc.jpeg?v=1664268040112">
+                
+            </img>
+            </div>
         </div>
 
  

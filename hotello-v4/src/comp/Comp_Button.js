@@ -3,8 +3,9 @@ import "../styles/button.css";
 function Button() {
     return (
       <>
-<button>  
-  <p>Läs mer</p>
+<button className="defaultButton">  
+  <p 
+  style={{margin: "0px"}}>Läs mer</p>
 </button>
       </>
     );
