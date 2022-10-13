@@ -10,7 +10,7 @@ const Calender = () => {
     <>
       <div className="calenderFormImg">
         <img
-          style={{ height: "24px", paddingRight: "8px" }}
+          style={{ height: "12px", paddingRight: "8px" }}
           src="https://cdn.glitch.global/b8bfc950-5347-4077-bd94-1e2db9ffd2ee/calendar3.svg?v=1664196888370"
           alt="location icon"
         />

@@ -160,8 +160,9 @@ header h1 {
 }
 
 header nav {
-  grid-column-start: 9;
-  grid-column-end: 12;
+  grid-column-start: 6;
+  grid-column-end: 11;
+  justify-self: end ;
 }
 
 header ul {
