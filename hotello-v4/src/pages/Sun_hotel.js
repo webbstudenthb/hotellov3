@@ -4,6 +4,7 @@ import Footer from "../comp/Comp_Footer";
 import Header from "../comp/Comp_Header";
 import Hero from "../comp/Comp_Hero";
 import { NavLink } from "react-router-dom";
+import IconBeach from "../comp/icons/iconBeach";
 
 function SunHotel() {
   const [mydata, setData] = useState(hoteldata);
@@ -11,6 +12,8 @@ function SunHotel() {
 <>
       <Header />
       <Hero />
+
+     
 
       <div className="MainHome">
         <div
@@ -70,6 +73,13 @@ function SunHotel() {
                         </div>
                       </div>
                     </div>
+                  </div>
+
+                  <div>
+                  {writeData.pool ? <IconBeach/> : <></>}
+
+
+
                   </div>
 
                   <div className="hotelListPriceButtonWrapper">

@@ -21,6 +21,14 @@
     "hotel_rating": "4",
     "routing_page": "",
     "Hotel_Overview_Route": "/grandhotell",
+
+    "pool": true,
+    "beach": true,
+    "cleaning": true,
+    "wifi": true,
+    "restaurant": true,
+    "family_hotel": false,
+
     "hotel_icons": [
       "Trådlöst internet",
       "Restaurang",
@@ -58,6 +66,14 @@
     "routing_page": "",
     "Hotel_Overview_Route": "/salsskiresort",
 
+    "pool": false,
+    "beach": false,
+    "cleaning": false,
+    "wifi": true,
+    "restaurant": true,
+    "family_hotel": true,
+
+
     "hotel_icons": [
       "Trådlöst internet",
       "Restaurang",
@@ -74,8 +90,6 @@
     "info_airport": "Artica - ATN",
     "info_cleaning": "Ingår",
     "info_breakfast": "Frukosten ingår och är öppen mellan 07:00 och 09:30"
-    
-
   },
 
   {
@@ -97,6 +111,13 @@
     "hotel_rating": "5",
     "routing_page": "",
     "Hotel_Overview_Route": "/sunsethotel",
+
+     "pool": false,
+    "beach": false,
+    "cleaning": false,
+    "wifi": true,
+    "restaurant": true,
+    "family_hotel": true,
 
     "hotel_icons": [
       "Trådlöst internet",
@@ -135,6 +156,13 @@
     "routing_page": "",
     "Hotel_Overview_Route": "/bluehotels",
 
+    "pool": false,
+    "beach": false,
+    "cleaning": false,
+    "wifi": false,
+    "restaurant": true,
+    "family_hotel": false,
+
     "hotel_icons": [
       "Trådlöst internet",
       "Restaurang",
@@ -170,6 +198,13 @@
     "hotel_rating": "5",
     "routing_page": "",
     "Hotel_Overview_Route": "/hogvallenfjallhotell",
+
+    "pool": true,
+    "beach": false,
+    "cleaning": false,
+    "wifi": true,
+    "restaurant": true,
+    "family_hotel": true,
 
     "hotel_icons": [
       "https://cdn.glitch.global/b8bfc950-5347-4077-bd94-1e2db9ffd2ee/wifi-solid.svg?v=1664459875956",
