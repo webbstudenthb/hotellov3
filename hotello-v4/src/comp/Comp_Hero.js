@@ -13,7 +13,7 @@ function Hero() {
         />
 
         <div className="HeroOverlay"></div>
-
+{/* 
         <div style={{ padding: "0px 0px 0px 0px" }} className="HeroText">
           <h1 style={{ color: "white" }}>Boka ditt nästa resmål hos oss </h1>
           <p style={{ color: "white" }}>
@@ -24,7 +24,7 @@ function Hero() {
         </div>
         <div className="HeroSearch" style={{ paddingBottom: "32px" }}>
           <Searchbar />
-        </div>
+        </div> */}
       </div>
     </>
   );
