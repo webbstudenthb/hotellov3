@@ -10,7 +10,11 @@ const Homepage = () => {
   return (
     <>
       <Header />
-      <Hero />
+      <Hero />  
+      
+
+
+
       <MainHome />
       <Footer />
       

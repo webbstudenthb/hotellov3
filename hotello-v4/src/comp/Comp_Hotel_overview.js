@@ -98,7 +98,6 @@ function HotelOverview() {
             </img>
             </div>
         </div>
-
  
         </>
      );
