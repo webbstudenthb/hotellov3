@@ -10,6 +10,9 @@ import AdultsOnly from "../pages/Adults_only";
 import WinterHotel from "../pages/Winter_hotel";
 import FamilyHotel from "../pages/Family_hotel";
 import SunHotel from "../pages/Sun_hotel";
+import SunsetHotel from "../pages/Hotels/SunsetHotel";
+
+
 
 
 function Routing() {
@@ -26,7 +29,8 @@ function Routing() {
         <Route path="/familyhotel" element={<FamilyHotel/> }></Route>
         <Route path="/sunhotel" element={<SunHotel/> }></Route>
         <Route path="/winterhotel" element={<WinterHotel/> }></Route>
-    
+        <Route path="/sunsethotel" element={<SunsetHotel/> }></Route>
+
         <Route path="/tim" element={<Tim/> }></Route>
       </Routes>
     </>

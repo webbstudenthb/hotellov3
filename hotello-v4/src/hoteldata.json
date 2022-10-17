@@ -3,10 +3,7 @@
     "hotel_id": "1",
     "hotel_tags": "Endast vuxna",
 
-
     "hotel_tim_tags": "IconBeach",
-
-
 
     "hotel_name": "Grand Hotell - Italiensk lyx",
     "hotel_description": "Grand Hotell erbjuds ett utmärkt läge, bara fem minuters promenad från Canal Grande och Rialto-bron. Vill du äta gott får du inte missa Le Maschere, där man serverar frukost, lunch och middag. Gäster på detta hotell i lyxstil får dessutom tillgång till en bar/lounge och en terrass. De sköna sängarna och läget brukar uppskattas av våra resenärer",
@@ -23,18 +20,27 @@
     "hotel_price": "1295",
     "hotel_rating": "4",
     "routing_page": "",
-    "hotel_icons": ["Trådlöst internet", "Restaurang", "Strand", "Poolområde", "Städning"], 
+    "Hotel_Overview_Route": "/grandhotell",
+    "hotel_icons": [
+      "Trådlöst internet",
+      "Restaurang",
+      "Strand",
+      "Poolområde",
+      "Städning"
+    ],
     "info_check_in": "14:00 - 19:00",
     "info_check_out": "13:00",
     "info_cancellation": "Gratis avbokning 7 dagar innan",
     "info_smooking": "Ej tillåtet",
     "info_transfer": "Ingår inte",
-    "info_airport": "Pinelasa - PSN"
+    "info_airport": "Pinelasa - PSN",
+    "info_cleaning": "Ingår",
+    "info_breakfast": "Frukosten ingår och är öppen mellan 07:00 och 09:30"
   },
 
   {
     "hotel_id": "2",
-    "hotel_tags":"Vintersemester",
+    "hotel_tags": "Vintersemester",
     "hotel_name": "Sals ski resort - Skidåkning i Alperna",
     "hotel_description": "Alldeles intill Alpentherme Spa, bara några minuters promenad från Bad Hofgasteins centrum ligger mysiga familjehotellet Sals ski resort och liften kan hittas inom en 5 minuters promenad. Alla rum är välinredda och utrustade med modernt badrum och en balkong med utsikt över Alperna. Det omfattande spaet kan du få upp temperaturen igen efter en lång dags skidåkning. Hotell Sals ski resort har också en uppvärmd inomhuspool där man kan ta några avkopplande varv.",
     "country": "Österrike",
@@ -50,17 +56,31 @@
     "hotel_price": "1790",
     "hotel_rating": "4",
     "routing_page": "",
-    "hotel_icons": ["Trådlöst internet", "Restaurang", "Strand", "Poolområde", "Poolbar", "Städning"], 
+    "Hotel_Overview_Route": "/salsskiresort",
+
+    "hotel_icons": [
+      "Trådlöst internet",
+      "Restaurang",
+      "Strand",
+      "Poolområde",
+      "Poolbar",
+      "Städning"
+    ],
     "info_check_in": "15.00",
     "info_check_out": "11.00",
     "info_cancellation": "Gratis avbokning 48 timmar innan",
     "info_smooking": "Ej tillåtet",
-    "info_transfer": "Ingår"
+    "info_transfer": "Ingår",
+    "info_airport": "Artica - ATN",
+    "info_cleaning": "Ingår",
+    "info_breakfast": "Frukosten ingår och är öppen mellan 07:00 och 09:30"
+    
+
   },
 
   {
     "hotel_id": "3",
-    "hotel_tags": "Familjehotell", 
+    "hotel_tags": "Familjehotell",
     "hotel_name": "Sunset hotel - Kurreklubben",
     "hotel_description": "Sunset hotel är ett modernt och barnvänligt hotell direkt vid havet , ett par kilometer utanför centrum. Hotellet är vackert inbäddat i tropisk grönska och består av nio rumsbyggnader och flera villor som är byggda runt en konstgjord damm. Vid de två härliga poolområdena trivs hela familjen och i den ena poolen finns en liten vattenrutschbana för de allra minsta barnen.",
     "country": "Spanien",
@@ -76,13 +96,23 @@
     "hotel_price": "1299",
     "hotel_rating": "5",
     "routing_page": "",
-    "hotel_icons": ["Trådlöst internet", "Restaurang", "Strand", "Poolområde", "Städning"], 
+    "Hotel_Overview_Route": "/sunsethotel",
+
+    "hotel_icons": [
+      "Trådlöst internet",
+      "Restaurang",
+      "Strand",
+      "Poolområde",
+      "Städning"
+    ],
     "info_check_in": "13.00",
     "info_check_out": "12.00",
     "info_cancellation": "Gratis avbokning 24 timmar innan",
     "info_smooking": "Ej tillåtet",
     "info_transfer": "Ingår ej",
-    "info_airport": "Macha spain - MCA"
+    "info_airport": "Macha spain - MCA",
+    "info_cleaning": "Ingår",
+    "info_breakfast": "Frukosten ingår och är öppen mellan 07:00 och 09:30"
   },
 
   {
@@ -103,13 +133,22 @@
     "hotel_price": "1195",
     "hotel_rating": "3",
     "routing_page": "",
-    "hotel_icons": ["Trådlöst internet", "Restaurang", "Poolområde", "Städning"], 
+    "Hotel_Overview_Route": "/bluehotels",
+
+    "hotel_icons": [
+      "Trådlöst internet",
+      "Restaurang",
+      "Poolområde",
+      "Städning"
+    ],
     "info_check_in": "14:00",
     "info_check_out": "11:00",
     "info_cancellation": "Gratis avbokning 24 timmar innan",
     "info_smooking": "Ej tillåtet",
     "info_transfer": "Ingår i priset",
-    "info_airport": "Trankolo - TRK"
+    "info_airport": "Trankolo - TRK",
+    "info_cleaning": "Ingår",
+    "info_breakfast": "Frukosten ingår och är öppen mellan 07:00 och 09:30"
   },
 
   {
@@ -130,13 +169,19 @@
     "hotel_price": "1995",
     "hotel_rating": "5",
     "routing_page": "",
-    "hotel_icons": ["https://cdn.glitch.global/b8bfc950-5347-4077-bd94-1e2db9ffd2ee/wifi-solid.svg?v=1664459875956", "https://cdn.glitch.global/b8bfc950-5347-4077-bd94-1e2db9ffd2ee/restaurant.svg?v=1664459652485"], 
+    "Hotel_Overview_Route": "/hogvallenfjallhotell",
+
+    "hotel_icons": [
+      "https://cdn.glitch.global/b8bfc950-5347-4077-bd94-1e2db9ffd2ee/wifi-solid.svg?v=1664459875956",
+      "https://cdn.glitch.global/b8bfc950-5347-4077-bd94-1e2db9ffd2ee/restaurant.svg?v=1664459652485"
+    ],
     "info_check_in": "13:00",
     "info_check_out": "12:00",
     "info_cancellation": "Gratis avbokning 7 dagar innan",
     "info_smooking": "Ej tillåtet",
     "info_transfer": "Ingår i priset",
-    "info_airport": "Östersund centrala flygplats - OCF"
+    "info_airport": "Östersund centrala flygplats - OCF",
+    "info_cleaning": "Ingår",
+    "info_breakfast": "Frukosten ingår och är öppen mellan 07:00 och 09:30"
   }
-  ]
-  
+]

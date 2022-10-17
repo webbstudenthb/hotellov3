@@ -3,8 +3,7 @@ import hoteldata from "..//hoteldata.json";
 import Footer from "../comp/Comp_Footer";
 import Header from "../comp/Comp_Header";
 import Hero from "../comp/Comp_Hero";
-
-import Button from "../comp/Comp_Calender";
+import { NavLink } from "react-router-dom";
 
 function WinterHotel() {
   const [mydata, setData] = useState(hoteldata);
@@ -81,7 +80,12 @@ function WinterHotel() {
                       </h2>
                     </div>
                     <div>
-                      <Button />
+                      <NavLink
+                        style={{ textDecoration: "none" }}
+                        to={writeData.Hotel_Overview_Route}
+                      >
+                        <button className="defaultButton">Välj hotell</button>
+                      </NavLink>
                     </div>
                   </div>
 
