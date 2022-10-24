@@ -488,10 +488,7 @@ function BlueHotelscheckout() {
                           <option value="5">5 rum</option>
                           <option  value="6">6 rum</option>
                         </Form.Select>
-                        
-
                          
-           
                       
                     </div>
                     <div className="innerSubmitButtonWrapper">
