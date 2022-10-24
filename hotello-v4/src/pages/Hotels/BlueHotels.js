@@ -2,7 +2,7 @@ import hoteldata from "..//../hoteldata.json";
 import { useState } from "react";
 import Header from "../../comp/Comp_Header";
 import BookingHero from "../../comp/Comp_Booking_Hero";
-import Button from "../../comp/Comp_Button";
+
 import { NavLink } from "react-router-dom";
 import Rating from "react-rating";
 import IconBeach from "../../comp/icons/iconBeach";
@@ -11,6 +11,8 @@ import IconPool from "../../comp/icons/iconPool";
 import IconWifi from "../../comp/icons/iconWifi";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
+import Modal from "react-bootstrap/Modal";
+import Button from "react-bootstrap/Button";
 import "../../styles/booking.css";
 
 function BlueHotels() {
@@ -115,6 +117,8 @@ function BlueHotels() {
                   <p>{writeData.hotel_description}</p>
                 </div>
               </div>
+
+              {/* Sammanfattningen hotellvy startar här */}
               <div className="HotelInfoSummary">
                 <h3 className="HeaderSummary">Bra att veta:</h3>
                 <ul>
@@ -147,7 +151,9 @@ function BlueHotels() {
                   </div>
                 </div>
               </div>
+              {/* Sammanfattningen hotellvy slutar här */}
 
+              {/* Gå tillbaka till andra kategorier börjar här */}
               <NavLink
                 to="/winterhotel"
                 style={{ textDecoration: "none" }}
@@ -184,6 +190,8 @@ function BlueHotels() {
                   ></img>
                 </div>
               </NavLink>
+
+              {/* Gå tillbaka till andra kategorier slutar här */}
             </div>
           </div>
         ))}
@@ -194,23 +202,75 @@ function BlueHotels() {
 // export default BlueHotels;
 
 function BlueHotelscheckout() {
+  //code get data from array inside the json file.
   const [mydata, setData] = useState(hoteldata);
-  const [message, setMessage] = useState('');
+
+  //this get the number of rooms selected
+  const [message, setMessage] = useState("");
   const handleChange = (event) => {
     setMessage(event.target.value);
-
-    console.log("value is:", event.target.value);
   };
 
+  //this get the date
+  const [dateMessage, setDateMessage] = useState("");
+  const handleDateChange = (event) => {
+    setDateMessage(event.target.value);
+  };
+
+  //this get the name from the form
+  const [nameMessage, setNameMessage] = useState("");
+  const nameChange = (event) => {
+    setNameMessage(event.target.value);
+  };
+
+  //this gets the lastname from form
+  const [lastName, setLastName] = useState("");
+  const lastNameChange = (event) => {
+    setLastName(event.target.value);
+  };
+
+    //this gets the Cansellation option from form
+    const [cancellationChange, setCancellationChange] = useState("");
+    const handleCancellationChange = (event) => {
+      setCancellationChange(event.target.value);
+    };
+  
+
+    //this gets the lastname from form
+    const [nightsChange, setNightChange] = useState("");
+    const handleNightsChange = (event) => {
+      setNightChange(event.target.value);
+    };
+
+    
+  
+
+  //this is a modal open and close function from react bootstrap
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  // event on submit
+
+  // const somefunction = async (...args) => {
+  //   let result = await feedReducer(args);
+  //   console.log(result);
+  //   // do something
+  // }
 
   return (
     <>
+    <BookingHero/>
+      {/* Here we import the data from hoteldata.json file, we also filter the information here */}
       {mydata
-        .filter((person) => person.hotel_id === "1")
+        .filter((person) => person.hotel_id === "4")
         .map((writeData) => (
-          <div key={writeData.hotel_id}>
+          // Here we have a key connected to the hotels id
+          <div style={{ paddingTop: "109.66px", paddingBottom: "109.66px" }} key={writeData.hotel_id}>
+            {/* Main home and mainhomeGrid items is used to position the data  */}
             <div className="MainHome">
               <div className="MainHomeGridItems">
+                {/* Detta är den övre delen start */}
                 <div
                   style={{
                     backgroundColor: "var(--whitesmoke)",
@@ -221,29 +281,23 @@ function BlueHotelscheckout() {
                   className="BookingHotelListCards"
                 >
                   <div className="insideCardsGrid">
-                    <div className="insideImgCard">
+                    <div className="insideImgCardBooking">
                       <img
                         style={{
                           height: "300px",
                           width: "100%",
                           borderRadius: "0px 24px 24px 24px",
-                          marginTop: "32px",
                         }}
-                        src="https://cdn.glitch.global/b8bfc950-5347-4077-bd94-1e2db9ffd2ee/luxury-hotel-2021-08-26-16-16-13-utc.jpeg?v=1664359471636"
-                        alt=""
+                        src={writeData.hotel_img}
+                        alt={writeData.hotel_img_alttext}
                       />
                     </div>
                     <div className="insideTextCard">
-                      <h2>Grand Hotel - Italiensk lyx </h2>
-                      <p>
-                        Boka din semester hos oss på fantastisk Granne Hotel.
-                        Hos oss kan du skämma bort dig rejält och njuta av våra
-                        mysiga hotellrum. Boka din semester hos oss på
-                        fantastisk Catalonia Plaza. Hos oss kan du skämma bort
-                        dig rejält och njuta av våra mysiga hotellrum.
-                      </p>
+                      <h2>{writeData.hotel_name}</h2>
+                      <p>{writeData.hotel_description}</p>
                     </div>
 
+                    {/* Code to get and show the flag of the country where the hotel is located */}
                     <div className="hotelListFlag">
                       <img
                         style={{
@@ -251,21 +305,24 @@ function BlueHotelscheckout() {
                           width: "100%",
                           borderRadius: "100%",
                         }}
-                        src="https://cdn.glitch.global/b8bfc950-5347-4077-bd94-1e2db9ffd2ee/14b2d4d75b676cb53cf4950895de6726_swe-SE_90765.gif?v=1664460107687"
-                        alt="spansk flagga"
+                        src={writeData.county_flag}
+                        alt={writeData.country_flag_alttex}
                       />
                     </div>
                   </div>
                 </div>
+
+                {/* Detta är den övre delen slut */}
               </div>
             </div>
 
-            <div className="MainHome-Booking">
-              <div className="MainHomeGridItems_FormBooking">
-                <div className="bookingFormBox">
-                  <h3>Bokningsinformation</h3>
+            {/* Här börjar nedre delen för booking */}
+            <Form>
+              <div className="MainHome-Booking">
+                <div className="MainHomeGridItems_FormBooking">
+                  <div className="bookingFormBox">
+                    <h3>Bokningsinformation</h3>
 
-                  <Form>
                     <Form.Group
                       style={{
                         display: "inline-block",
@@ -273,22 +330,29 @@ function BlueHotelscheckout() {
                         marginRight: "16px",
                       }}
                       className="mb-3"
-                      controlId="formBasicEmail"
+                      // controlId="formBasicEmail"
                     >
                       <Form.Control
+                        required
+                        onChange={nameChange}
                         type="text"
                         placeholder="Förnamn"
                         className="textbox"
-                        name="cardNumber"
+                        name="name"
                       />
                     </Form.Group>
 
                     <Form.Group
                       style={{ display: "inline-block", width: "45%" }}
                       className="mb-3"
-                      controlId="formBasicPassword"
+                      // controlId="formBasicPassword"
                     >
-                      <Form.Control type="text" placeholder="Efternamn" />
+                      <Form.Control
+                        required
+                        onChange={lastNameChange}
+                        type="text"
+                        placeholder="Efternamn"
+                      />
                     </Form.Group>
 
                     <Form.Group
@@ -298,7 +362,7 @@ function BlueHotelscheckout() {
                         marginRight: "16px",
                       }}
                       className="mb-3"
-                      controlId="formBasicPassword"
+                      // controlId="formBasicPassword"
                     >
                       <Form.Control type="text" placeholder="Gatuadress" />
                     </Form.Group>
@@ -310,7 +374,7 @@ function BlueHotelscheckout() {
                         marginRight: "16px",
                       }}
                       className="mb-3"
-                      controlId="formBasicPassword"
+                      // controlId="formBasicPassword"
                     >
                       <Form.Control type="text" placeholder="Husnr" />
                     </Form.Group>
@@ -322,7 +386,7 @@ function BlueHotelscheckout() {
                         marginRight: "16px",
                       }}
                       className="mb-3"
-                      controlId="formBasicPassword"
+                      // controlId="formBasicPassword"
                     >
                       <Form.Control type="text" placeholder="Postnummer" />
                     </Form.Group>
@@ -334,7 +398,7 @@ function BlueHotelscheckout() {
                         marginRight: "16px",
                       }}
                       className="mb-3"
-                      controlId="formBasicPassword"
+                      // controlId="formBasicPassword"
                     >
                       <Form.Control type="text" placeholder="Stad" />
                     </Form.Group>
@@ -342,15 +406,15 @@ function BlueHotelscheckout() {
                     <Form.Group
                       style={{ width: "50%", marginRight: "16px" }}
                       className="mb-3"
-                      controlId="formBasicPassword"
+                      // controlId="formBasicPassword"
                     >
-                      <Form.Control type="text" placeholder="Epost" />
+                      <Form.Control required type="text" placeholder="Epost" />
                     </Form.Group>
 
                     <Form.Group
                       style={{ width: "50%", marginRight: "16px" }}
                       className="mb-3"
-                      controlId="formBasicPassword"
+                      // controlId="formBasicPassword"
                     >
                       <Form.Control type="text" placeholder="Telefonnummer" />
                     </Form.Group>
@@ -358,7 +422,7 @@ function BlueHotelscheckout() {
                     <Form.Group
                       style={{ width: "90%", marginRight: "16px" }}
                       className="mb-3"
-                      controlId="formBasicPassword"
+                      // controlId="formBasicPassword"
                     >
                       <Form.Control
                         as="textarea"
@@ -368,56 +432,68 @@ function BlueHotelscheckout() {
 
                     <Form.Group className="mb-3" controlId="formBasicCheckbox">
                       <Form.Check
+                        required
                         type="checkbox"
                         label="Jag godkänner att informationen är korrekt"
                       />
                     </Form.Group>
-                
-                  </Form>
-                </div>
-              </div>
-
-              <div className="MainHomeGridItems-Summery_Booking">
-                <div className="bookingSummeryBox">
-                  <h3>Sammanfattning</h3>
-                  <div className="innerBookingSummeryBox">
-                    <p style={{ fontWeight: "bold" }}>Hotell</p>
-                    <p>{writeData.hotel_name}</p>
-                    <p style={{ fontWeight: "bold" }}>Antal rum</p>
-                    <p>{writeData.number_of_rooms}</p>
-                    <p style={{ fontWeight: "bold" }}>Datum</p>
-                    <p>{}</p>
-                    <p style={{ fontWeight: "bold" }}>Pris</p>
-                    <p>{writeData.hotel_price}:-/rum</p>
-                    <p style={{ fontWeight: "bold" }}>Avbokningsavgift</p>
-                    <p>{writeData.cancellation_price}:-</p>
                   </div>
                 </div>
-              </div>
 
-              <div className="MainHomeGridItems-Payment_Booking">
-                <div className="bookingPaymentBox">
-                  <h3>Betalning</h3>
+                <div className="MainHomeGridItems-Summery_Booking">
+                  <div className="bookingSummeryBox">
+                    <h3>Sammanfattning</h3>
+                    <div className="innerBookingSummeryBox">
+                      <p style={{ fontWeight: "bold" }}>Hotell</p>
+                      <p>{writeData.hotel_name}</p>
+                      <p style={{ fontWeight: "bold" }}>Antal bokade rum</p>
+                      <p>{message}</p>
+                      <p style={{ fontWeight: "bold" }}>Datum</p>
+                      <p>{dateMessage}</p>
+                      <p style={{ fontWeight: "bold" }}>Pris</p>
+                      <p>{writeData.hotel_price}:-/rum</p>
+                      <p style={{ fontWeight: "bold" }}>Avbokningsavgift - Tillval</p>
+                      <p>Avboka din bokning fram tills 24h innan inchecking. </p>
 
-                  <div className="formPaymentBoxWrapper">
-                    <div className="innerPaymentBoxWrapper">
-                      <InputGroup className="mb-3">
-                        <InputGroup.Text id="basic-addon1">
-                          <img
-                            style={{ height: "20px" }}
-                            src="https://cdn.glitch.global/b8bfc950-5347-4077-bd94-1e2db9ffd2ee/credir%20card4.png?v=1664962363655"
-                            alt="bild på olika kredtkorts utgivare"
+                      <Form.Select
+                          style={{ display: "inline-block", width: "20em" }}
+                          aria-label="Default select example"
+                          onChange={handleCancellationChange}
+                        >
+                          <option value="0">Ingen avbokning</option>
+                          <option value={writeData.cancellation_price}>Lägg till avbokning för {writeData.cancellation_price} kr</option>
+                         
+                        </Form.Select>
+
+                        
+
+
+                    </div>
+                  </div>
+                </div>
+
+                <div className="MainHomeGridItems-Payment_Booking">
+                  <div className="bookingPaymentBox">
+                    <h3>Betalning</h3>
+
+                    <div className="formPaymentBoxWrapper">
+                      <div className="innerPaymentBoxWrapper">
+                        <InputGroup className="mb-3">
+                          <InputGroup.Text id="basic-addon1">
+                            <img
+                              style={{ height: "20px" }}
+                              src="https://cdn.glitch.global/b8bfc950-5347-4077-bd94-1e2db9ffd2ee/credir%20card4.png?v=1664962363655"
+                              alt="bild på olika kredtkorts utgivare"
+                            />
+                          </InputGroup.Text>
+                          <Form.Control
+                            placeholder="Kortnummer"
+                            aria-label="CreditCardNumber"
+                            aria-describedby="basic-addon1"
+                            maxLength={16}
                           />
-                        </InputGroup.Text>
-                        <Form.Control
-                          placeholder="Kortnummer"
-                          aria-label="CreditCardNumber"
-                          aria-describedby="basic-addon1"
-                          maxLength={16}
-                        />
-                      </InputGroup>
+                        </InputGroup>
 
-                      <Form>
                         <Form.Select
                           style={{ display: "inline-block", width: "5em" }}
                           aria-label="Default select example"
@@ -429,6 +505,12 @@ function BlueHotelscheckout() {
                           <option value="4">April</option>
                           <option value="5">Maj</option>
                           <option value="6">Juni</option>
+                          <option value="7">Juli</option>
+                          <option value="8">Aug</option>
+                          <option value="9">Sep</option>
+                          <option value="10">Okt</option>
+                          <option value="11">Nov</option>
+                          <option value="12">Dec</option>
                         </Form.Select>
 
                         <Form.Select
@@ -459,50 +541,190 @@ function BlueHotelscheckout() {
                         >
                           <Form.Control type="email" placeholder="CVC" />
                         </Form.Group>
-                      </Form>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div className="MainHomeGridItems-Submit_Booking">
-                <div className="bookingSubmitBox">
-                  <div className="formSubmitBoxWrapper">
-                    <div className="innerSubmitBoxWrapper">
-                    <p style={{ margin: "0px" }}>Välj hur många rum som du vill boka</p>
-                    <p style={{ fontSize: "9.89px" }}>Rummet är avsedda för {writeData.number_of_rooms}</p>
-            
-                    <Form.Select
+                <div className="MainHomeGridItems-Submit_Booking">
+                  <div className="bookingSubmitBox">
+                    <div className="formSubmitBoxWrapper">
+                      <div className="innerSubmitBoxWrapper">
+                        <p style={{ margin: "0px" }}>
+                          Välj hur många rum som du vill boka
+                        </p>
+                        <p style={{ fontSize: "9.89px" }}>
+                          Rummet är avsedda för {writeData.number_of_rooms}
+                        </p>
+
+                        <Form.Select
                           style={{
                             display: "inline-block",
                             width: "10em",
-                         
                           }}
                           aria-label="Default select example"
                           onChange={handleChange}
+                          required
                         >
                           <option value="0">Antal rum</option>
                           <option value="1">1 rum</option>
                           <option value="2">2 rum</option>
-                          <option  value="3">3 rum</option>
-                          <option  value="4">4 rum</option>
+                          <option value="3">3 rum</option>
+                          <option value="4">4 rum</option>
                           <option value="5">5 rum</option>
-                          <option  value="6">6 rum</option>
+                          <option value="6">6 rum</option>
                         </Form.Select>
-                         
-                      
-                    </div>
-                    <div className="innerSubmitButtonWrapper">
-                          <p>Totalpris för bokningen är <b> {message * writeData.hotel_price}kr </b></p>
+                      </div>
+                      <div className="innerSubmitButtonWrapper">
+                        <p>
+                          Totalpris för bokningen är{" "}
+                          <b> {(message * writeData.hotel_price * nightsChange)}kr </b>
+                        </p>
 
-                          <div className="positionSubmitButtonBooking">
-                          <button style={{justifyContent: "center"}} className="defaultButton">Boka hotell</button>
-                          </div>
-                                
-                          </div>
+                        <div className="positionSubmitButtonBooking">
+                          {/* <button
+                            onClick={handleShow}
+                            style={{ justifyContent: "center" }}
+                            className="defaultButton"
+                          >
+                            Boka hotell 
+                          </button> */}
+                          <Button
+                            className="defaultButton"
+                            type="submit"
+                            onClick={handleShow}
+                            value="submit"
+                          >
+                            Boka hotell
+                          </Button>
+                        </div>
+                      </div>
+
+                      <div className="innerCheckInDateWrapper">
+                        <div className="positionCheckInDateBooking">
+                          <p style={{ margin: "0px" }}>
+                            Välj incheckningsdatum.
+                          </p>
+                          <p style={{ fontSize: "9.89px" }}>
+                            Dagen då du planerar att checka in.
+                          </p>
+                          <InputGroup>
+                            <Form.Control
+                              required
+                              onChange={handleDateChange}
+                              style={{
+                                color: "black",
+                                textAlign: "start",
+                              }}
+                              placeholder="Check-in?"
+                              type="date"
+                              aria-describedby="basic-addon1"
+                            />
+                          </InputGroup>
+                        </div>
+                      </div>
+
+
+                      <div className="innerCheckOutDateWrapper">
+                        <div className="positionCheckOutDateBooking">
+                          <p style={{ margin: "0px" }}>
+                            Välj antal nätter.
+                          </p>
+                          <p style={{ fontSize: "9.89px" }}>
+                            Välj antal nätter som ni vill bo.
+                          </p>
+                          <Form.Select
+                          style={{
+                            display: "inline-block",
+                            width: "10em",
+                          }}
+                          aria-label="Default select example"
+                          onChange={handleNightsChange}
+                          required
+                        >
+                          <option value="0">Antal nätter</option>
+                          <option value="1">1 natt</option>
+                          <option value="2">2 nätter</option>
+                          <option value="3">3 nätter</option>
+                          <option value="4">4 nätter</option>
+                          <option value="5">5 nätter</option>
+                          <option value="6">6 nätter</option>
+                        </Form.Select>
+                        </div>
+                      </div>
+
+                      <Modal show={show} onHide={handleClose}>
+                        <Modal.Header closeButton>
+                          <Modal.Title>Tack för din bokning </Modal.Title>
+                        </Modal.Header>
+                        <Modal.Body>
+                          <p>
+                            {" "}
+                            Hej {nameMessage}, du har nu bokat{" "}
+                            {writeData.hotel_name} den <b>{dateMessage}</b> till
+                            ett pris av{" "}
+                            <b> {(message * writeData.hotel_price * nightsChange)}kr </b> som
+                            kommer att dras från ditt kreditkort.
+                          </p>
+                          <br></br>
+
+                          <h3>Bokningsuppgifter</h3>
+
+                          <p>
+                            <b>Hotel: </b>
+                            {writeData.hotel_name}
+                          </p>
+
+                          <p>
+                            <b>Boendet är bokat i namn: </b>
+                            {nameMessage} {lastName}
+                          </p>
+
+                          <p>
+                            <b>Bokningsnummer: </b>B
+                            {writeData.hotel_id +
+                              dateMessage +
+                              nameMessage +
+                              message * writeData.hotel_price}
+                          </p>
+                          <p>
+                            <b>Pris: </b>
+                            {message * writeData.hotel_price}kr
+                          </p>
+                          <p>
+                            <b>Datum: </b>
+                            {dateMessage}
+                          </p>
+
+                          <p>
+                            <b>Antal rum: </b>
+                            {message}st
+                          </p>
+                        </Modal.Body>
+                        <Modal.Footer>
+                          <NavLink to="/" style={{ textDecoration: "none" }}>
+                            <button
+                              className="defaultButton"
+                              onClick={handleClose}
+                            >
+                              Stäng
+                            </button>
+                          </NavLink>
+
+                          <button
+                            className="defaultButton"
+                            onClick={handleClose}
+                          >
+                            Skriv ut
+                          </button>
+                        </Modal.Footer>
+                      </Modal>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </Form>
+
+            {/* Här slutar nedre delen för booking */}
           </div>
         ))}
     </>
