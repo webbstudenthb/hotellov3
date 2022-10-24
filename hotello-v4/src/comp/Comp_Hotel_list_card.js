@@ -10,6 +10,7 @@ import IconPoolbar from "./icons/iconPoolbar";
 //importera från Array
 import { useState } from "react";
 import hoteldata from "../hoteldata.json";
+import { NavLink } from "react-router-dom";
 
 function HotelListCard() {
   const [mydata, setData] = useState(hoteldata);
@@ -26,7 +27,7 @@ function HotelListCard() {
 
   return (
     <>
-      <div className="MainHome">
+      <div  style={{ paddingTop: "109.66px", paddingBottom: "109.66px" }} className="MainHome">
         <div className="MainHomeGridItems">
           {mydata.map((writeData) => (
             <div
@@ -120,7 +121,13 @@ function HotelListCard() {
                     </h2>
                   </div>
                   <div>
-                    <Button />
+                    
+                  <NavLink
+                        style={{ textDecoration: "none" }}
+                        to={writeData.Hotel_Overview_Route}
+                      >
+                        <button className="defaultButton">Välj hotell</button>
+                      </NavLink>
                   </div>
                 </div>
 

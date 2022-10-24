@@ -23,6 +23,7 @@
     "number_of_rooms": "1 rum för 2 personer",
     "routing_page": "",
     "Hotel_Overview_Route": "/grandhotell",
+    "Hotel_Checkout_Route": "/grandhotelcheckout",
 
     "pool": true,
     "beach": true,
@@ -69,6 +70,7 @@
     "number_of_rooms": "1 rum för 2 personer",
     "routing_page": "",
     "Hotel_Overview_Route": "/salsskiresort",
+    "Hotel_Checkout_Route": "/salsskiresortcheckout",
 
     "pool": false,
     "beach": false,
@@ -117,6 +119,7 @@
     "number_of_rooms": "1 rum för 2 personer",
     "routing_page": "",
     "Hotel_Overview_Route": "/sunsethotel",
+    "Hotel_Checkout_Route": "/sunsethotelcheckout",
 
      "pool": true,
     "beach": true,
@@ -163,6 +166,7 @@
     "number_of_rooms": "1 rum för 2 personer",
     "routing_page": "",
     "Hotel_Overview_Route": "/bluehotels",
+    "Hotel_Checkout_Route": "/bluehotelscheckout",
 
     "pool": false,
     "beach": false,
@@ -208,6 +212,7 @@
     "number_of_rooms": "1 rum för 2 personer",
     "routing_page": "",
     "Hotel_Overview_Route": "/hogvallenfjallhotell",
+    "Hotel_Checkout_Route": "/hogvallenfjallhotellcheckout",
 
     "pool": true,
     "beach": false,

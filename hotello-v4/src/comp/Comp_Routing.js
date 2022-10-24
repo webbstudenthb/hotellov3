@@ -10,11 +10,15 @@ import AdultsOnly from "../pages/Adults_only";
 import WinterHotel from "../pages/Winter_hotel";
 import FamilyHotel from "../pages/Family_hotel";
 import SunHotel from "../pages/Sun_hotel";
-import SunsetHotel from "../pages/Hotels/SunsetHotel";
-import SalsSkiResort from "../pages/Hotels/SalsSkiResort";
-import HogvallenFjallHotell from "../pages/Hotels/HogvallenFjallHotell";
-import GrandHotel from "../pages/Hotels/GrandHotel";
+
+
+
+import {GrandHotel, GrandHotelcheckout} from "../pages/Hotels/GrandHotel";
+
 import {BlueHotels, BlueHotelscheckout} from "../pages/Hotels/BlueHotels";
+import {SunsetHotel, SunsetHotelcheckout} from "../pages/Hotels/SunsetHotel";
+import {SalsSkiResort, SalsSkiResortcheckout} from "../pages/Hotels/SalsSkiResort";
+import {HogvallenFjallHotell, HogvallenFjallHotellcheckout} from "../pages/Hotels/HogvallenFjallHotell";
 
 
 function Routing() {
@@ -39,6 +43,10 @@ function Routing() {
         <Route path="/tim" element={<Tim/> }></Route>
 
         <Route path="bluehotelscheckout" element={<BlueHotelscheckout/>}></Route>
+        <Route path="grandhotelcheckout" element={<GrandHotelcheckout/>}></Route>
+        <Route path="sunsethotelcheckout" element={<SunsetHotelcheckout/>}></Route>
+        <Route path="salsskiresortcheckout" element={<SalsSkiResortcheckout/>}></Route>
+        <Route path="hogvallenfjallhotellcheckout" element={<HogvallenFjallHotellcheckout/>}></Route>
       </Routes>
     </>
   );

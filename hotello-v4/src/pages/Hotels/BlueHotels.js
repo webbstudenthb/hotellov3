@@ -14,22 +14,29 @@ import InputGroup from "react-bootstrap/InputGroup";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import "../../styles/booking.css";
+import Footer from "../../comp/Comp_Footer";
 
 function BlueHotels() {
   const [mydata, setData] = useState(hoteldata);
   return (
     <>
       <Header />
-      <BookingHero />
 
       {mydata
         .filter((person) => person.hotel_id === "4")
         .map((writeData) => (
           <div key={writeData.hotel_id} style={{}}>
-            <div
-              style={{ paddingTop: "109.66px", paddingBottom: "109.66px" }}
-              className="HotelOverviewMain"
-            >
+            <div className="BookingHero">
+              <img
+                className="BookingHeroImg"
+                src={writeData.hotel_img}
+                alt="Bild av ett hotell som ligger direkt nere vid havet"
+                style={{ height: "464.48px", objectFit: "cover" }}
+              />
+
+              <div className="HeroOverlay"></div>
+            </div>
+            <div   style={{ paddingTop: "109.66px", paddingBottom: "109.66px" }} className="HotelOverviewMain">
               <div className="OverviewBox">
                 <h2 className="OverviewHotelName">
                   {writeData.hotel_name}
@@ -143,10 +150,16 @@ function BlueHotels() {
                 </ul>
                 <div className="priceFrom">
                   <p style={{ margin: "auto auto -10px 1rem" }}>pris från:</p>
-                  <h1 style={{ color: "black" }}>{writeData.hotel_price}kr</h1>
+                  <h4 style={{ color: "black" }}>{writeData.hotel_price}kr</h4>
+
                   <div className="buttons">
-                    <NavLink style={{ textDecoration: "none" }}>
-                      <Button style={{ margin: "100px" }} />
+                    <NavLink
+                      to={writeData.Hotel_Checkout_Route}
+                      style={{ textDecoration: "none" }}
+                    >
+                      <div>
+                        <button className="defaultButton">Boka</button>
+                      </div>
                     </NavLink>
                   </div>
                 </div>
@@ -195,6 +208,7 @@ function BlueHotels() {
             </div>
           </div>
         ))}
+      <Footer />
     </>
   );
 }
@@ -229,21 +243,17 @@ function BlueHotelscheckout() {
     setLastName(event.target.value);
   };
 
-    //this gets the Cansellation option from form
-    const [cancellationChange, setCancellationChange] = useState("");
-    const handleCancellationChange = (event) => {
-      setCancellationChange(event.target.value);
-    };
-  
+  //this gets the Cansellation option from form
+  const [cancellationChange, setCancellationChange] = useState("");
+  const handleCancellationChange = (event) => {
+    setCancellationChange(event.target.value);
+  };
 
-    //this gets the lastname from form
-    const [nightsChange, setNightChange] = useState("");
-    const handleNightsChange = (event) => {
-      setNightChange(event.target.value);
-    };
-
-    
-  
+  //this gets the lastname from form
+  const [nightsChange, setNightChange] = useState("");
+  const handleNightsChange = (event) => {
+    setNightChange(event.target.value);
+  };
 
   //this is a modal open and close function from react bootstrap
   const [show, setShow] = useState(false);
@@ -260,19 +270,31 @@ function BlueHotelscheckout() {
 
   return (
     <>
-    <BookingHero/>
+      <Header />
+
       {/* Here we import the data from hoteldata.json file, we also filter the information here */}
       {mydata
         .filter((person) => person.hotel_id === "4")
         .map((writeData) => (
           // Here we have a key connected to the hotels id
-          <div style={{ paddingTop: "109.66px", paddingBottom: "109.66px" }} key={writeData.hotel_id}>
+          <div key={writeData.hotel_id}>
+            <div className="BookingHero">
+              <img
+                className="BookingHeroImg"
+                src={writeData.hotel_img}
+                alt="Bild av ett hotell som ligger direkt nere vid havet"
+                style={{ height: "464.48px", objectFit: "cover" }}
+              />
+
+              <div className="HeroOverlay"></div>
+            </div>
             {/* Main home and mainhomeGrid items is used to position the data  */}
             <div className="MainHome">
               <div className="MainHomeGridItems">
                 {/* Detta är den övre delen start */}
                 <div
                   style={{
+                    marginTop: "109.66px",
                     backgroundColor: "var(--whitesmoke)",
                     height: "364px",
                     borderRadius: "24px 24px 24px 24px",
@@ -318,7 +340,7 @@ function BlueHotelscheckout() {
 
             {/* Här börjar nedre delen för booking */}
             <Form>
-              <div className="MainHome-Booking">
+              <div style={{marginBottom: "109.66px"}}  className="MainHome-Booking">
                 <div className="MainHomeGridItems_FormBooking">
                   <div className="bookingFormBox">
                     <h3>Bokningsinformation</h3>
@@ -452,22 +474,8 @@ function BlueHotelscheckout() {
                       <p>{dateMessage}</p>
                       <p style={{ fontWeight: "bold" }}>Pris</p>
                       <p>{writeData.hotel_price}:-/rum</p>
-                      <p style={{ fontWeight: "bold" }}>Avbokningsavgift - Tillval</p>
-                      <p>Avboka din bokning fram tills 24h innan inchecking. </p>
-
-                      <Form.Select
-                          style={{ display: "inline-block", width: "20em" }}
-                          aria-label="Default select example"
-                          onChange={handleCancellationChange}
-                        >
-                          <option value="0">Ingen avbokning</option>
-                          <option value={writeData.cancellation_price}>Lägg till avbokning för {writeData.cancellation_price} kr</option>
-                         
-                        </Form.Select>
-
-                        
-
-
+                      <p style={{ fontWeight: "bold" }}>Avbokning</p>
+                      <p>{writeData.info_cancellation}.</p>
                     </div>
                   </div>
                 </div>
@@ -495,7 +503,7 @@ function BlueHotelscheckout() {
                         </InputGroup>
 
                         <Form.Select
-                          style={{ display: "inline-block", width: "5em" }}
+                          style={{ display: "inline-block", width: "6em" }}
                           aria-label="Default select example"
                         >
                           <option>Mån</option>
@@ -549,9 +557,7 @@ function BlueHotelscheckout() {
                   <div className="bookingSubmitBox">
                     <div className="formSubmitBoxWrapper">
                       <div className="innerSubmitBoxWrapper">
-                        <p style={{ margin: "0px" }}>
-                          Välj hur många rum som du vill boka
-                        </p>
+                        <p style={{ margin: "0px" }}>Välj antal rum</p>
                         <p style={{ fontSize: "9.89px" }}>
                           Rummet är avsedda för {writeData.number_of_rooms}
                         </p>
@@ -577,7 +583,12 @@ function BlueHotelscheckout() {
                       <div className="innerSubmitButtonWrapper">
                         <p>
                           Totalpris för bokningen är{" "}
-                          <b> {(message * writeData.hotel_price * nightsChange)}kr </b>
+                          <b>
+                            {" "}
+                            {message *
+                              writeData.hotel_price *
+                              nightsChange}kr{" "}
+                          </b>
                         </p>
 
                         <div className="positionSubmitButtonBooking">
@@ -623,32 +634,29 @@ function BlueHotelscheckout() {
                         </div>
                       </div>
 
-
                       <div className="innerCheckOutDateWrapper">
                         <div className="positionCheckOutDateBooking">
-                          <p style={{ margin: "0px" }}>
-                            Välj antal nätter.
-                          </p>
+                          <p style={{ margin: "0px" }}>Välj antal nätter.</p>
                           <p style={{ fontSize: "9.89px" }}>
                             Välj antal nätter som ni vill bo.
                           </p>
                           <Form.Select
-                          style={{
-                            display: "inline-block",
-                            width: "10em",
-                          }}
-                          aria-label="Default select example"
-                          onChange={handleNightsChange}
-                          required
-                        >
-                          <option value="0">Antal nätter</option>
-                          <option value="1">1 natt</option>
-                          <option value="2">2 nätter</option>
-                          <option value="3">3 nätter</option>
-                          <option value="4">4 nätter</option>
-                          <option value="5">5 nätter</option>
-                          <option value="6">6 nätter</option>
-                        </Form.Select>
+                            style={{
+                              display: "inline-block",
+                              width: "10em",
+                            }}
+                            aria-label="Default select example"
+                            onChange={handleNightsChange}
+                            required
+                          >
+                            <option value="0">Antal nätter</option>
+                            <option value="1">1 natt</option>
+                            <option value="2">2 nätter</option>
+                            <option value="3">3 nätter</option>
+                            <option value="4">4 nätter</option>
+                            <option value="5">5 nätter</option>
+                            <option value="6">6 nätter</option>
+                          </Form.Select>
                         </div>
                       </div>
 
@@ -662,8 +670,13 @@ function BlueHotelscheckout() {
                             Hej {nameMessage}, du har nu bokat{" "}
                             {writeData.hotel_name} den <b>{dateMessage}</b> till
                             ett pris av{" "}
-                            <b> {(message * writeData.hotel_price * nightsChange)}kr </b> som
-                            kommer att dras från ditt kreditkort.
+                            <b>
+                              {" "}
+                              {message *
+                                writeData.hotel_price *
+                                nightsChange}kr{" "}
+                            </b>{" "}
+                            som kommer att dras från ditt kreditkort.
                           </p>
                           <br></br>
 
@@ -688,7 +701,7 @@ function BlueHotelscheckout() {
                           </p>
                           <p>
                             <b>Pris: </b>
-                            {message * writeData.hotel_price}kr
+                            {message * writeData.hotel_price * nightsChange}kr
                           </p>
                           <p>
                             <b>Datum: </b>
@@ -698,6 +711,11 @@ function BlueHotelscheckout() {
                           <p>
                             <b>Antal rum: </b>
                             {message}st
+                          </p>
+
+                          <p>
+                            <b>Antal nätter: </b>
+                            {nightsChange}st
                           </p>
                         </Modal.Body>
                         <Modal.Footer>
@@ -727,6 +745,7 @@ function BlueHotelscheckout() {
             {/* Här slutar nedre delen för booking */}
           </div>
         ))}
+      <Footer />
     </>
   );
 }

@@ -33,8 +33,15 @@
   }
   
 
+
   /*BUTTON*/
 /*General styling for the buttons*/
+
+
+
+.buttons{
+    margin-bottom: 32px;
+}
 
 .defaultButton {
     background-color: var(--primary);
