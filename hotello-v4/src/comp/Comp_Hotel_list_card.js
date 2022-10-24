@@ -6,6 +6,7 @@ import IconPool from "./icons/iconPool";
 import IconWifi from "./icons/iconWifi";
 import IconPoolbar from "./icons/iconPoolbar";
 
+
 //importera från Array
 import { useState } from "react";
 import hoteldata from "../hoteldata.json";

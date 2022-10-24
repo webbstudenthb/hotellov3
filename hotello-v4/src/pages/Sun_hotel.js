@@ -5,15 +5,16 @@ import Header from "../comp/Comp_Header";
 import Hero from "../comp/Comp_Hero";
 import { NavLink } from "react-router-dom";
 import IconBeach from "../comp/icons/iconBeach";
+import IconRestaurant from "../comp/icons/iconRestaurant";
+import IconPool from "../comp/icons/iconPool";
+import IconWifi from "../comp/icons/iconWifi";
 
 function SunHotel() {
   const [mydata, setData] = useState(hoteldata);
   return (
-<>
+    <>
       <Header />
       <Hero />
-
-     
 
       <div className="MainHome">
         <div
@@ -45,41 +46,64 @@ function SunHotel() {
                       alt={writeData.hotel_img_alttext}
                     />
                   </div>
+
                   <div className="insideTextCard">
                     <h2>{writeData.hotel_name} </h2>
                     <p>{writeData.hotel_description}</p>
 
-                    <div className="iconBoxWrapper">
-                      <div className="iconImgBox"></div>
+                    {/* {writeData.wifi ? <div><IconWifi/><p style={{display: "inline-block"}}>Trådlöst internet</p></div> : <p></p>} */}
 
-                      <div className="iconTextBox">
-                        <p>Restaurang</p>
-                      </div>
-
-                      <div className="iconImgBox">
-                        <div className="iconBoxInline">
-                          <div className="iconBox">
-                            <img
-                              style={{
-                                width: "18px",
-                                height: "18px",
-                                color: "white",
-                              }}
-                              src={writeData.hotel_icons}
-                              alt="Ikon med ett parasoll"
-                            />
-                            <p>{writeData.hotel_icons}</p>
-                          </div>
+                    {writeData.restaurant ? (
+                      <div className="iconBoxWrapper">
+                        <div className="iconImgBox">
+                          <IconRestaurant />
+                        </div>
+                        <div className="iconTextBox">
+                          <p>Restaurang</p>
                         </div>
                       </div>
-                    </div>
-                  </div>
+                    ) : (
+                      <></>
+                    )}
 
-                  <div>
-                  {writeData.pool ? <IconBeach/> : <></>}
+                    {writeData.wifi ? (
+                      <div className="iconBoxWrapper">
+                        <div className="iconImgBox">
+                          <IconWifi />
+                        </div>
+                        <div className="iconTextBox">
+                          <p>Trådlöst internet</p>
+                        </div>
+                      </div>
+                    ) : (
+                      <></>
+                    )}
 
+                    {writeData.pool ? (
+                      <div className="iconBoxWrapper">
+                        <div className="iconImgBox">
+                          <IconPool />
+                        </div>
+                        <div className="iconTextBox">
+                          <p>Poolområde</p>
+                        </div>
+                      </div>
+                    ) : (
+                      <></>
+                    )}
 
-
+                    {writeData.beach ? (
+                      <div className="iconBoxWrapper">
+                        <div className="iconImgBox">
+                          <IconBeach />
+                        </div>
+                        <div className="iconTextBox">
+                          <p>Strand</p>
+                        </div>
+                      </div>
+                    ) : (
+                      <></>
+                    )}
                   </div>
 
                   <div className="hotelListPriceButtonWrapper">

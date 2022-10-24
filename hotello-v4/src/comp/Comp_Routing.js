@@ -11,8 +11,10 @@ import WinterHotel from "../pages/Winter_hotel";
 import FamilyHotel from "../pages/Family_hotel";
 import SunHotel from "../pages/Sun_hotel";
 import SunsetHotel from "../pages/Hotels/SunsetHotel";
-
-
+import SalsSkiResort from "../pages/Hotels/SalsSkiResort";
+import HogvallenFjallHotell from "../pages/Hotels/HogvallenFjallHotell";
+import GrandHotel from "../pages/Hotels/GrandHotel";
+import {BlueHotels, BlueHotelscheckout} from "../pages/Hotels/BlueHotels";
 
 
 function Routing() {
@@ -30,8 +32,13 @@ function Routing() {
         <Route path="/sunhotel" element={<SunHotel/> }></Route>
         <Route path="/winterhotel" element={<WinterHotel/> }></Route>
         <Route path="/sunsethotel" element={<SunsetHotel/> }></Route>
-
+        <Route path="/salsskiresort" element={<SalsSkiResort/>}></Route>
+        <Route path="/HogvallenFjallHotell" element={<HogvallenFjallHotell/>}></Route>
+        <Route path="/grandhotell" element={<GrandHotel/>}></Route>
+        <Route path="/bluehotels" element={<BlueHotels/>}></Route>
         <Route path="/tim" element={<Tim/> }></Route>
+
+        <Route path="bluehotelscheckout" element={<BlueHotelscheckout/>}></Route>
       </Routes>
     </>
   );

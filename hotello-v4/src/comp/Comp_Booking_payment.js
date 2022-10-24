@@ -4,13 +4,13 @@ import InputGroup from "react-bootstrap/InputGroup";
 
 function BookingPayment() {
   //   const getInputPaymentData = { paymentInput };
-  let getPaymentData = "1234567890123456";
-  let res = [...getPaymentData]
-    .map((d, i) => (i % 4 == 0 ? " " + d : d))
-    .join("")
-    .trim();
+  // let getPaymentData = "1234567890123456";
+  // let res = [...getPaymentData]
+  //   .map((d, i) => (i % 4 == 0 ? " " + d : d))
+  //   .join("")
+  //   .trim();
 
-  console.log(res);
+  // console.log(res);
   return (
     <>
       <div className="MainHomeGridItems-Payment_Booking">

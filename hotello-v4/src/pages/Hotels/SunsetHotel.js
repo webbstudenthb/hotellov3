@@ -1,11 +1,14 @@
-// import "../styles/hotelOverview.css";
-// import "../styles/bookingOverview.css";
 import hoteldata from "..//../hoteldata.json";
 import { useState } from "react";
 import Header from "../../comp/Comp_Header";
 import BookingHero from "../../comp/Comp_Booking_Hero";
 import Button from "../../comp/Comp_Button";
 import { NavLink } from "react-router-dom";
+import Rating from "react-rating";
+import IconBeach from "../../comp/icons/iconBeach";
+import IconRestaurant from "../../comp/icons/iconRestaurant";
+import IconPool from "../../comp/icons/iconPool";
+import IconWifi from "../../comp/icons/iconWifi";
 
 function SunsetHotel() {
   const [mydata, setData] = useState(hoteldata);
@@ -15,7 +18,7 @@ function SunsetHotel() {
       <BookingHero />
 
       {mydata
-        .filter((person) => person.hotel_tags === "Familjehotell")
+        .filter((person) => person.hotel_id === "3")
         .map((writeData) => (
           <div key={writeData.hotel_id} style={{}}>
             <div
@@ -25,7 +28,14 @@ function SunsetHotel() {
               <div className="OverviewBox">
                 <h2 className="OverviewHotelName">
                   {writeData.hotel_name}
-                  <img
+
+                  <Rating
+                    // fullSymbol="src/img/star-solid.svg"
+                    initialRating={writeData.hotel_rating}
+                    readonly
+                  />
+
+                  {/* <img
                     style={{
                       height: "2rem",
                       margin: "-1rem auto auto 2rem",
@@ -33,18 +43,69 @@ function SunsetHotel() {
                     className="starsForHotel"
                     src="https://cdn.glitch.global/b8bfc950-5347-4077-bd94-1e2db9ffd2ee/Star.svg?v=1664379295785"
                     alt="Stjärna"
-                  />
+                  /> */}
                 </h2>
                 <div className="starsForHotel">
                   {/** Skriva ut antal stjärnor för valt hotell från array*/}
 
-                  <div className="iconsForHotel">
-                    {" "}
-                    <img
+                  <div className="full-hotel-icon-wrapper">
+                    {/* <img
                       style={{ margin: "1rem" }}
                       src="https://cdn.glitch.global/b8bfc950-5347-4077-bd94-1e2db9ffd2ee/wifi-solid.svg?v=1664459875956"
                       alt="Ikon för trådlöst internet"
-                    />
+                    /> */}
+
+                    {writeData.restaurant ? (
+                      <div className="iconBoxWrapper-hotel">
+                        <div className="iconImgBox-hotel">
+                          <IconRestaurant />
+                        </div>
+                        <div className="iconTextBox-hotel">
+                          <p>Restaurang</p>
+                        </div>
+                      </div>
+                    ) : (
+                      <></>
+                    )}
+
+                    {writeData.wifi ? (
+                      <div className="iconBoxWrapper-hotel">
+                        <div className="iconImgBox-hotel">
+                          <IconWifi />
+                        </div>
+                        <div className="iconTextBox-hotel">
+                          <p>Trådlöst internet</p>
+                        </div>
+                      </div>
+                    ) : (
+                      <></>
+                    )}
+
+                    {writeData.pool ? (
+                      <div className="iconBoxWrapper-hotel">
+                        <div className="iconImgBox-hotel">
+                          <IconPool />
+                        </div>
+                        <div className="iconTextBox-hotel">
+                          <p>Poolområde</p>
+                        </div>
+                      </div>
+                    ) : (
+                      <></>
+                    )}
+
+                    {writeData.beach ? (
+                      <div className="iconBoxWrapper-hotel">
+                        <div className="iconImgBox-hotel">
+                          <IconBeach />
+                        </div>
+                        <div className="iconTextBox-hotel">
+                          <p>Strand</p>
+                        </div>
+                      </div>
+                    ) : (
+                      <></>
+                    )}
                   </div>
                   {/**Skriva ut ikoner för valt hotell */}
 

@@ -1,20 +1,16 @@
-
 import "../styles/bookingOverview.css";
 
 function BookingOverview() {
-    return ( 
-        <>
-            <div className="MainHome">
+  return (
+    <>
+      <div className="MainHome">
         <div className="MainHomeGridItems">
-        
-
           <div
             style={{
               backgroundColor: "var(--whitesmoke)",
               height: "364px",
               borderRadius: "24px 24px 24px 24px",
               marginBottom: "16px",
-            
             }}
             className="BookingHotelListCards"
           >
@@ -25,8 +21,7 @@ function BookingOverview() {
                     height: "300px",
                     width: "100%",
                     borderRadius: "0px 24px 24px 24px",
-                    marginTop: "32px"
-
+                    marginTop: "32px",
                   }}
                   src="https://cdn.glitch.global/b8bfc950-5347-4077-bd94-1e2db9ffd2ee/luxury-hotel-2021-08-26-16-16-13-utc.jpeg?v=1664359471636"
                   alt=""
@@ -43,7 +38,6 @@ function BookingOverview() {
                 </p>
               </div>
 
-
               <div className="hotelListFlag">
                 <img
                   style={{
@@ -57,12 +51,10 @@ function BookingOverview() {
               </div>
             </div>
           </div>
-
         </div>
       </div>
-        </>
-     );
+    </>
+  );
 }
 
 export default BookingOverview;
-

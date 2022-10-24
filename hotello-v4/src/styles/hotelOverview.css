@@ -1,0 +1,26 @@
+.iconTextBox-hotel{
+    display: inline-block;
+    height: 50px;
+    align-items: center;
+    font-weight: bold;
+  }
+  
+  
+  .iconImgBox-hotel{
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+  }
+  
+  
+  .iconBoxWrapper-hotel{
+    width: auto;
+    display: inline-block;
+    padding-right: 16px;
+  
+  }
+
+  .full-hotel-icon-wrapper{
+    width: 100%;
+   
+  }
