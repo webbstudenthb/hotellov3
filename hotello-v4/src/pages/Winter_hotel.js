@@ -1,3 +1,6 @@
+// Denna kod är uppbygd på samma sätt som Adults only men filtreas kopplat till de hotell som har ett visst ID 
+//Därför skriver jag inte kommentarer på denna utan hänvisar till Adult_only.js
+
 import { useState } from "react";
 import hoteldata from "..//hoteldata.json";
 import Footer from "../comp/Comp_Footer";
@@ -8,7 +11,6 @@ import IconBeach from "../comp/icons/iconBeach";
 import IconRestaurant from "../comp/icons/iconRestaurant";
 import IconPool from "../comp/icons/iconPool";
 import IconWifi from "../comp/icons/iconWifi";
-
 
 function WinterHotel() {
   const [mydata, setData] = useState(hoteldata);
@@ -22,6 +24,12 @@ function WinterHotel() {
           style={{ paddingTop: "109.66px", paddingBottom: "109.66px" }}
           className="MainHomeGridItems"
         >
+          <div>
+            <h2>Vintersport</h2>
+            <p style={{ width: "70%", paddingBottom: "16px" }}>
+              Våra resor till fjällen passar dig som vill ha ett aktivt resemål. 
+            </p>
+          </div>
           {mydata
             .filter((person) => person.hotel_tags === "Vintersemester")
             .map((writeData) => (
@@ -48,55 +56,61 @@ function WinterHotel() {
                     />
                   </div>
                   <div className="insideTextCard">
-                  <h2>{writeData.hotel_name} </h2>
-                  <p>{writeData.hotel_description}</p>
+                    <h2>{writeData.hotel_name} </h2>
+                    <p>{writeData.hotel_description}</p>
 
-                  {/* {writeData.wifi ? <div><IconWifi/><p style={{display: "inline-block"}}>Trådlöst internet</p></div> : <p></p>} */}
-          
-                {writeData.restaurant ? 
-                <div className="iconBoxWrapper">
-                  <div className="iconImgBox">
-                    <IconRestaurant/>
-                  </div>
-                  <div className="iconTextBox">
-                    <p>Restaurang</p>
-                  </div>
-                </div> : <p></p>}    
+                    {writeData.restaurant ? (
+                      <div className="iconBoxWrapper">
+                        <div className="iconImgBox">
+                          <IconRestaurant />
+                        </div>
+                        <div className="iconTextBox">
+                          <p>Restaurang</p>
+                        </div>
+                      </div>
+                    ) : (
+                      <p></p>
+                    )}
 
+                    {writeData.wifi ? (
+                      <div className="iconBoxWrapper">
+                        <div className="iconImgBox">
+                          <IconWifi />
+                        </div>
+                        <div className="iconTextBox">
+                          <p>Trådlöst internet</p>
+                        </div>
+                      </div>
+                    ) : (
+                      <p></p>
+                    )}
 
-                {writeData.wifi ? 
-                <div className="iconBoxWrapper">
-                  <div className="iconImgBox">
-                    <IconWifi />
-                  </div>
-                  <div className="iconTextBox">
-                    <p>Trådlöst internet</p>
-                  </div>
-                </div> : <p></p>}    
+                    {writeData.pool ? (
+                      <div className="iconBoxWrapper">
+                        <div className="iconImgBox">
+                          <IconPool />
+                        </div>
+                        <div className="iconTextBox">
+                          <p>Poolområde</p>
+                        </div>
+                      </div>
+                    ) : (
+                      <p></p>
+                    )}
 
-
-                {writeData.pool ? 
-                <div className="iconBoxWrapper">
-                  <div className="iconImgBox">
-                    <IconPool />
+                    {writeData.beach ? (
+                      <div className="iconBoxWrapper">
+                        <div className="iconImgBox">
+                          <IconBeach />
+                        </div>
+                        <div className="iconTextBox">
+                          <p>Strand</p>
+                        </div>
+                      </div>
+                    ) : (
+                      <p></p>
+                    )}
                   </div>
-                  <div className="iconTextBox">
-                    <p>Poolområde</p>
-                  </div>
-                </div> : <p></p>}    
-
-
-                {writeData.beach ? 
-                <div className="iconBoxWrapper">
-                  <div className="iconImgBox">
-                    <IconBeach />
-                  </div>
-                  <div className="iconTextBox">
-                    <p>Strand</p>
-                  </div>
-                </div> : <p></p>}    
-                </div>
-
 
                   <div className="hotelListPriceButtonWrapper">
                     <div className="hotelListPrice">

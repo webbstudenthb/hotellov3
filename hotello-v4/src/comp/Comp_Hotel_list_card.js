@@ -1,33 +1,34 @@
-import Button from "./Comp_Button";
+//Importerar css fil
 import "../styles/hotelListCards.css";
+
+//Importera ikon komponenterna
 import IconBeach from "./icons/iconBeach";
 import IconRestaurant from "./icons/iconRestaurant";
 import IconPool from "./icons/iconPool";
 import IconWifi from "./icons/iconWifi";
-import IconPoolbar from "./icons/iconPoolbar";
 
-
-//importera från Array
+//Importerar useState
 import { useState } from "react";
+//importera data från Array sjon fil
 import hoteldata from "../hoteldata.json";
+//Importera NavLink från React router
+import { NavLink } from "react-router-dom";
 
 function HotelListCard() {
+  //funktionen används för att update state kopplat till array datan i json filen.
+  //Nedan används .map för att skriva ut alla hotell samt viss av den information
+  //som vi använder i denna komponent från arraydatan
+  //vi använder alltså {writeData.[vad vi nu vill hämta från array]} för att skriva ut datan
   const [mydata, setData] = useState(hoteldata);
-
-  // const filterItem = (hotel_tim_tags) => {
-  //   const newItem = Data.filter((newVal) => {
-  //     return newVal.category === hotel_tim_tags; 
-  //       	// comparing category for displaying data
-  //   });
-  //   setItem(newItem);
-  // };
-
-
 
   return (
     <>
-      <div className="MainHome">
+      <div
+        style={{ paddingTop: "109.66px", paddingBottom: "109.66px" }}
+        className="MainHome"
+      >
         <div className="MainHomeGridItems">
+          {/* .map används för att skriva hämta från arrayen i json filen */}
           {mydata.map((writeData) => (
             <div
               key={writeData.hotel_id}
@@ -55,62 +56,61 @@ function HotelListCard() {
                   <h2>{writeData.hotel_name} </h2>
                   <p>{writeData.hotel_description}</p>
 
-                  {/* {writeData.wifi ? <div><IconWifi/><p style={{display: "inline-block"}}>Trådlöst internet</p></div> : <p></p>} */}
-          
-                {writeData.restaurant ? 
-                <div className="iconBoxWrapper">
-                  <div className="iconImgBox">
-                    <IconRestaurant />
-                  </div>
-                  <div className="iconTextBox">
-                    <p>Restaurang</p>
-                  </div>
-                </div> : <p></p>}    
+                  {/* Här har vi en lösning som checkar om ikonen skall skrivas ut eller ej. 
+                  Detta kopplat till boolian i arrayen true eller false  
+                  alla ikoner är uppbyggda på samma vis*/}
+                  {writeData.restaurant ? (
+                    <div className="iconBoxWrapper">
+                      <div className="iconImgBox">
+                        <IconRestaurant />
+                      </div>
+                      <div className="iconTextBox">
+                        <p>Restaurang</p>
+                      </div>
+                    </div>
+                  ) : (
+                    <p></p>
+                  )}
 
+                  {writeData.wifi ? (
+                    <div className="iconBoxWrapper">
+                      <div className="iconImgBox">
+                        <IconWifi />
+                      </div>
+                      <div className="iconTextBox">
+                        <p>Trådlöst internet</p>
+                      </div>
+                    </div>
+                  ) : (
+                    <p></p>
+                  )}
 
-                {writeData.wifi ? 
-                <div className="iconBoxWrapper">
-                  <div className="iconImgBox">
-                    <IconWifi />
-                  </div>
-                  <div className="iconTextBox">
-                    <p>Trådlöst internet</p>
-                  </div>
-                </div> : <p></p>}    
+                  {writeData.pool ? (
+                    <div className="iconBoxWrapper">
+                      <div className="iconImgBox">
+                        <IconPool />
+                      </div>
+                      <div className="iconTextBox">
+                        <p>Poolområde</p>
+                      </div>
+                    </div>
+                  ) : (
+                    <p></p>
+                  )}
 
-
-                {writeData.pool ? 
-                <div className="iconBoxWrapper">
-                  <div className="iconImgBox">
-                    <IconPool />
-                  </div>
-                  <div className="iconTextBox">
-                    <p>Poolområde</p>
-                  </div>
-                </div> : <p></p>}    
-
-
-                {writeData.beach ? 
-                <div className="iconBoxWrapper">
-                  <div className="iconImgBox">
-                    <IconBeach />
-                  </div>
-                  <div className="iconTextBox">
-                    <p>Strand</p>
-                  </div>
-                </div> : <p></p>}    
+                  {writeData.beach ? (
+                    <div className="iconBoxWrapper">
+                      <div className="iconImgBox">
+                        <IconBeach />
+                      </div>
+                      <div className="iconTextBox">
+                        <p>Strand</p>
+                      </div>
+                    </div>
+                  ) : (
+                    <p></p>
+                  )}
                 </div>
-
-          
-
-
-
-
-
-
-
-
-
 
                 <div className="hotelListPriceButtonWrapper">
                   <div className="hotelListPrice">
@@ -120,7 +120,12 @@ function HotelListCard() {
                     </h2>
                   </div>
                   <div>
-                    <Button />
+                    <NavLink
+                      style={{ textDecoration: "none" }}
+                      to={writeData.Hotel_Overview_Route}
+                    >
+                      <button className="defaultButton">Välj hotell</button>
+                    </NavLink>
                   </div>
                 </div>
 

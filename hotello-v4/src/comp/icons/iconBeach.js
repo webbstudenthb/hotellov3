@@ -1,5 +1,7 @@
+//importerar css fil
 import "../../styles/icons.css";
 
+//nedan hämtas ikonen från glitch där vi valt att "hosta" våra bilder. Positionering och styling görs dels i inline styling och i css filen
 function IconBeach() {
   return (
     <div className="iconBoxInline">

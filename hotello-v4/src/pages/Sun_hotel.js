@@ -1,3 +1,6 @@
+// Denna kod är uppbygd på samma sätt som Adults only men filtreas kopplat till de hotell som har ett visst ID
+//Därför skriver jag inte kommentarer på denna utan hänvisar till Adult_only.js
+
 import { useState } from "react";
 import hoteldata from "..//hoteldata.json";
 import Footer from "../comp/Comp_Footer";
@@ -21,6 +24,12 @@ function SunHotel() {
           style={{ paddingTop: "109.66px", paddingBottom: "109.66px" }}
           className="MainHomeGridItems"
         >
+          <div>
+            <h2>Solsemester</h2>
+            <p style={{ width: "70%", paddingBottom: "16px" }}>
+              Njut av bad, strand och sol. Det innehåller våra resor till solen.
+            </p>
+          </div>
           {mydata
             .filter((person) => person.hotel_tags === "Solsemester")
             .map((writeData) => (
@@ -50,8 +59,6 @@ function SunHotel() {
                   <div className="insideTextCard">
                     <h2>{writeData.hotel_name} </h2>
                     <p>{writeData.hotel_description}</p>
-
-                    {/* {writeData.wifi ? <div><IconWifi/><p style={{display: "inline-block"}}>Trådlöst internet</p></div> : <p></p>} */}
 
                     {writeData.restaurant ? (
                       <div className="iconBoxWrapper">

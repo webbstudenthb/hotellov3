@@ -1,6 +1,9 @@
+//importerar css
 import "../styles/bookingOverview.css";
 
 function BookingOverview() {
+
+  //Nedan sammanställs koden för 
   return (
     <>
       <div className="MainHome">
