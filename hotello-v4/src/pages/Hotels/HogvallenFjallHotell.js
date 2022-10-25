@@ -1,3 +1,6 @@
+//ALL DENNA KOD SER LIKADAN UT PÅ BLUE HOTEL SAMT DE ANDRA HOTELL 
+//SOM LIGGER I MAPPEN HOTLES. DÄRFÖR SÅ HÄNVISAR VI TILL KOMMENTARERNA I BLUE HOTELS
+
 import hoteldata from "..//../hoteldata.json";
 import { useState } from "react";
 import Header from "../../comp/Comp_Header";

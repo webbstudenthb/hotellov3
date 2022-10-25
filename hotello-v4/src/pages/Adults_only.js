@@ -1,20 +1,25 @@
+//Här importeras iseState från react
 import { useState } from "react";
+//Här importeras HotelData från vår json fil
 import hoteldata from "..//hoteldata.json";
+//Här importeras komponenterna Footer, Header, Hero, samt komponenterna för ikonerna
 import Footer from "../comp/Comp_Footer";
 import Header from "../comp/Comp_Header";
 import Hero from "../comp/Comp_Hero";
-import { NavLink } from "react-router-dom";
 import IconBeach from "../comp/icons/iconBeach";
 import IconRestaurant from "../comp/icons/iconRestaurant";
 import IconPool from "../comp/icons/iconPool";
 import IconWifi from "../comp/icons/iconWifi";
-
+//Här importeras NavLink från react router
+import { NavLink } from "react-router-dom";
 
 function AdultsOnly() {
+  //Här används useState för att checka State kopplat till vår json fil samt .map
   const [mydata, setData] = useState(hoteldata);
 
   return (
-<>
+    <>
+      {/* Här renderas komponenterna Header och Hero ut */}
       <Header />
       <Hero />
 
@@ -26,9 +31,13 @@ function AdultsOnly() {
           <div>
             <h2>Endast vuxna</h2>
             <p style={{ width: "70%", paddingBottom: "16px" }}>
-              För vuxna som vill ha lugn och ro så passar våra kategori <b>Endast Vuxna</b> perfekt.
+              För vuxna som vill ha lugn och ro så passar våra kategori{" "}
+              <b>Endast Vuxna</b> perfekt.
             </p>
           </div>
+          {/* 
+          Här filtras datan via .filter och skrivs ut via .map 
+          Vi använder då {writeData.[den data som vi vill skriva ut] för att skriva ut text, bilder eller likannde från json filen */}
           {mydata
             .filter((person) => person.hotel_tags === "Endast vuxna")
             .map((writeData) => (
@@ -55,56 +64,62 @@ function AdultsOnly() {
                     />
                   </div>
                   <div className="insideTextCard">
-                  <h2>{writeData.hotel_name} </h2>
-                  <p>{writeData.hotel_description}</p>
+                    <h2>{writeData.hotel_name} </h2>
+                    <p>{writeData.hotel_description}</p>
 
-                  {/* {writeData.wifi ? <div><IconWifi/><p style={{display: "inline-block"}}>Trådlöst internet</p></div> : <p></p>} */}
-          
-                {writeData.restaurant ? 
-                <div className="iconBoxWrapper">
-                  <div className="iconImgBox">
-                    <IconRestaurant/>
-                  </div>
-                  <div className="iconTextBox">
-                    <p>Restaurang</p>
-                  </div>
-                </div> : <p></p>}    
+                    {/* Här skrivs ikonerna ut om de är markerade som true i arrayen. Det är alltså en boolian */}
+                    {writeData.restaurant ? (
+                      <div className="iconBoxWrapper">
+                        <div className="iconImgBox">
+                          <IconRestaurant />
+                        </div>
+                        <div className="iconTextBox">
+                          <p>Restaurang</p>
+                        </div>
+                      </div>
+                    ) : (
+                      <p></p>
+                    )}
 
+                    {writeData.wifi ? (
+                      <div className="iconBoxWrapper">
+                        <div className="iconImgBox">
+                          <IconWifi />
+                        </div>
+                        <div className="iconTextBox">
+                          <p>Trådlöst internet</p>
+                        </div>
+                      </div>
+                    ) : (
+                      <p></p>
+                    )}
 
-                {writeData.wifi ? 
-                <div className="iconBoxWrapper">
-                  <div className="iconImgBox">
-                    <IconWifi />
-                  </div>
-                  <div className="iconTextBox">
-                    <p>Trådlöst internet</p>
-                  </div>
-                </div> : <p></p>}    
+                    {writeData.pool ? (
+                      <div className="iconBoxWrapper">
+                        <div className="iconImgBox">
+                          <IconPool />
+                        </div>
+                        <div className="iconTextBox">
+                          <p>Poolområde</p>
+                        </div>
+                      </div>
+                    ) : (
+                      <p></p>
+                    )}
 
-
-                {writeData.pool ? 
-                <div className="iconBoxWrapper">
-                  <div className="iconImgBox">
-                    <IconPool />
+                    {writeData.beach ? (
+                      <div className="iconBoxWrapper">
+                        <div className="iconImgBox">
+                          <IconBeach />
+                        </div>
+                        <div className="iconTextBox">
+                          <p>Strand</p>
+                        </div>
+                      </div>
+                    ) : (
+                      <p></p>
+                    )}
                   </div>
-                  <div className="iconTextBox">
-                    <p>Poolområde</p>
-                  </div>
-                </div> : <p></p>}    
-
-
-                {writeData.beach ? 
-                <div className="iconBoxWrapper">
-                  <div className="iconImgBox">
-                    <IconBeach />
-                  </div>
-                  <div className="iconTextBox">
-                    <p>Strand</p>
-                  </div>
-                </div> : <p></p>}    
-                </div>
-
-          
 
                   <div className="hotelListPriceButtonWrapper">
                     <div className="hotelListPrice">

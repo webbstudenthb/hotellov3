@@ -1,10 +1,14 @@
+//Importerar css fil
 import "../styles/bookingHero.css";
+// Importerar json filen arraydata
 import hoteldata from "..//hoteldata.json";
+// Hämtar usestate
 import { useState } from "react";
 
-//Vi skall här hämta bilden från varje hotell eftersom bilden skall ändras här beroende av vilket hotell som man är inne på.
-
 function BookingHero() {
+  //Sätter bilden baserat på vilket state och filtrerar daran basear på hotel_tags
+  //Styling och layout görs i CSs fil eller i inline styling
+  //.map används för att skriva ut alla hotell medans filter används för att filtrera hotellen och endats visa dem som är aktuella.
   const [mydata, setData] = useState(hoteldata);
   return (
     <>
@@ -19,7 +23,6 @@ function BookingHero() {
                 alt="Bild av ett hotell som ligger direkt nere vid havet"
                 style={{ height: "464.48px", objectFit: "cover" }}
               />
-
               <div className="HeroOverlay"></div>
             </div>
           </div>

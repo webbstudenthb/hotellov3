@@ -1,23 +1,25 @@
+//import av css fil
+import "../styles/routing.css"
+//import av Route och Routes från react router
 import {Route, Routes } from "react-router-dom";
+//nedan importeras alla de komponenter som renderas via react router och de NavLink och HashLink as Link som finns genom komponenterna
 import Homepage from "../pages/Homepage_page";
 import All_hotels from "../pages/All_hotels";
 import Booking from "../pages/Booking_page"
 import Focus from "../pages/Focus_page"
 import Overview from "../pages/Overview_hotels"
 import Tim from "../pages/Tim";
-import "../styles/routing.css"
 import AdultsOnly from "../pages/Adults_only";
 import WinterHotel from "../pages/Winter_hotel";
 import FamilyHotel from "../pages/Family_hotel";
 import SunHotel from "../pages/Sun_hotel";
-
 import {GrandHotel, GrandHotelcheckout} from "../pages/Hotels/GrandHotel";
 import {BlueHotels, BlueHotelscheckout} from "../pages/Hotels/BlueHotels";
 import {SunsetHotel, SunsetHotelcheckout} from "../pages/Hotels/SunsetHotel";
 import {SalsSkiResort, SalsSkiResortcheckout} from "../pages/Hotels/SalsSkiResort";
 import {HogvallenFjallHotell, HogvallenFjallHotellcheckout} from "../pages/Hotels/HogvallenFjallHotell";
 
-
+//Nedan väljs en path i route och därefter vilket element som skall renderas. 
 function Routing() {
   return (
     <>
@@ -38,7 +40,6 @@ function Routing() {
         <Route path="/grandhotell" element={<GrandHotel/>}></Route>
         <Route path="/bluehotels" element={<BlueHotels/>}></Route>
         <Route path="/tim" element={<Tim/> }></Route>
-
         <Route path="bluehotelscheckout" element={<BlueHotelscheckout/>}></Route>
         <Route path="grandhotelcheckout" element={<GrandHotelcheckout/>}></Route>
         <Route path="sunsethotelcheckout" element={<SunsetHotelcheckout/>}></Route>

@@ -2,9 +2,7 @@
   {
     "hotel_id": "1",
     "hotel_tags": "Endast vuxna",
-
     "hotel_tim_tags": "IconBeach",
-
     "hotel_name": "Grand Hotell - Italiensk lyx",
     "hotel_description": "Grand Hotell erbjuds ett utmärkt läge, bara fem minuters promenad från Canal Grande och Rialto-bron. Vill du äta gott får du inte missa Le Maschere, där man serverar frukost, lunch och middag. Gäster på detta hotell i lyxstil får dessutom tillgång till en bar/lounge och en terrass. De sköna sängarna och läget brukar uppskattas av våra resenärer",
     "country": "Italien",
@@ -24,14 +22,12 @@
     "routing_page": "",
     "Hotel_Overview_Route": "/grandhotell",
     "Hotel_Checkout_Route": "/grandhotelcheckout",
-
     "pool": true,
     "beach": true,
     "cleaning": true,
     "wifi": true,
     "restaurant": true,
     "family_hotel": false,
-
     "hotel_icons": [
       "Trådlöst internet",
       "Restaurang",
@@ -71,15 +67,12 @@
     "routing_page": "",
     "Hotel_Overview_Route": "/salsskiresort",
     "Hotel_Checkout_Route": "/salsskiresortcheckout",
-
     "pool": false,
     "beach": false,
     "cleaning": false,
     "wifi": true,
     "restaurant": true,
     "family_hotel": true,
-
-
     "hotel_icons": [
       "Trådlöst internet",
       "Restaurang",
@@ -120,14 +113,12 @@
     "routing_page": "",
     "Hotel_Overview_Route": "/sunsethotel",
     "Hotel_Checkout_Route": "/sunsethotelcheckout",
-
      "pool": true,
     "beach": true,
     "cleaning": false,
     "wifi": false,
     "restaurant": true,
     "family_hotel": true,
-
     "hotel_icons": [
       "Trådlöst internet",
       "Restaurang",
@@ -167,14 +158,12 @@
     "routing_page": "",
     "Hotel_Overview_Route": "/bluehotels",
     "Hotel_Checkout_Route": "/bluehotelscheckout",
-
     "pool": false,
     "beach": false,
     "cleaning": false,
     "wifi": false,
     "restaurant": true,
     "family_hotel": false,
-
     "hotel_icons": [
       "Trådlöst internet",
       "Restaurang",
@@ -213,14 +202,12 @@
     "routing_page": "",
     "Hotel_Overview_Route": "/hogvallenfjallhotell",
     "Hotel_Checkout_Route": "/hogvallenfjallhotellcheckout",
-
     "pool": true,
     "beach": false,
     "cleaning": false,
     "wifi": true,
     "restaurant": true,
     "family_hotel": true,
-
     "hotel_icons": [
       "https://cdn.glitch.global/b8bfc950-5347-4077-bd94-1e2db9ffd2ee/wifi-solid.svg?v=1664459875956",
       "https://cdn.glitch.global/b8bfc950-5347-4077-bd94-1e2db9ffd2ee/restaurant.svg?v=1664459652485"

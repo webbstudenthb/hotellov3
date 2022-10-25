@@ -7,10 +7,6 @@ import HotelListCard from "../comp/Comp_Hotel_list_card";
 const Focus = () => {
   return (
     <>
-
-       
-
-    
       <Header />
       <Hero/>
 

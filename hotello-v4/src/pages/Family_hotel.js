@@ -1,3 +1,6 @@
+// Denna kod är uppbygd på samma sätt som Adults only men filtreas kopplat till de hotell som har ett visst ID 
+//Därför skriver jag inte kommentarer på denna utan hänvisar till Adult_only.js
+
 import { useState } from "react";
 import hoteldata from "..//hoteldata.json";
 import Footer from "../comp/Comp_Footer";

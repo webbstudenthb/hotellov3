@@ -1,6 +1,10 @@
+//importerar css fil
 import "../styles/award.css";
 
 function Award() {
+
+  //nedan kod stylas via css filen samt via inlinestyling 
+  //Den är till för mer att symbolisera och fylla ut sidan lite och har inte i sig med uppgiften att göra. 
   return (
     <>
       <div style={{}}>

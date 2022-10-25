@@ -1,7 +1,11 @@
+//importerar css fil
 import "../styles/bookingForm.css";
+//Importerar bootstrap css fil
 import "bootstrap/dist/css/bootstrap.min.css";
+//Importerar Button och Form från Bootstrap
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+//Importerar componenterna BookingPayment och Booking Summery
 import BookingPayment from "./Comp_Booking_payment";
 import BookingSummery from "./Comp_Booking_summery";
 
@@ -12,7 +16,9 @@ function BookingForm() {
         <div className="MainHomeGridItems_FormBooking">
           <div className="bookingFormBox">
             <h3>Bokningsinformation</h3>
-
+            {/* Här används Bootstraps Form för att skapa ett formulär 
+            Positionering och styling görs antingen i CSS filen alt. i inline styling
+            */}
             <Form>
               <Form.Group
                 style={{
@@ -124,6 +130,7 @@ function BookingForm() {
           </div>
         </div>
 
+        {/* Här renderas BookingSummery och BookingPayment        */}
         <BookingSummery />
         <BookingPayment />
       </div>

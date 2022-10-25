@@ -3,10 +3,13 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+//Här importeras BrowserRouter från React router.
 import { BrowserRouter } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
+  // BrowserRouter är positionerad här eftersom det är det "slutgiltliga steget.
+  // Därmed fungerar routingen oavsett vilken component eller sida som det används på."
   <BrowserRouter>
     <React.StrictMode>
       <App />

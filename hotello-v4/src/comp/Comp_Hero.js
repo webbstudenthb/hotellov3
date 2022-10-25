@@ -1,6 +1,9 @@
-import Searchbar from "./Comp_Home_search_bar";
+//Importerar CSS filen
 import "../styles/hero.css";
 
+
+//Detta är hero komponenet som används på flera sidor. Bilden är här statisk och positionering samt 
+//layout styrs via CSS filen samt viss inline styling. 
 function Hero() {
   return (
     <>
@@ -13,18 +16,6 @@ function Hero() {
         />
 
         <div className="HeroOverlay"></div>
-{/* 
-        <div style={{ padding: "0px 0px 0px 0px" }} className="HeroText">
-          <h1 style={{ color: "white" }}>Boka ditt nästa resmål hos oss </h1>
-          <p style={{ color: "white" }}>
-            Book your vacation at one of our wonderful hotels. We have
-            accommodation and rooms for the couple, child family and the party
-            people.{" "}
-          </p>
-        </div>
-        <div className="HeroSearch" style={{ paddingBottom: "32px" }}>
-          <Searchbar />
-        </div> */}
       </div>
     </>
   );

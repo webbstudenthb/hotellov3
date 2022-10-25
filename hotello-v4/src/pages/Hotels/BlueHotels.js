@@ -1,27 +1,37 @@
+//importerar datan från json filen (array data)
 import hoteldata from "..//../hoteldata.json";
+//importerar useState från react
 import { useState } from "react";
+//Importerar komponenten Header, Footer, samt kompenteterna för ikonerna
 import Header from "../../comp/Comp_Header";
-
-
-import { NavLink } from "react-router-dom";
-import Rating from "react-rating";
+import Footer from "../../comp/Comp_Footer";
 import IconBeach from "../../comp/icons/iconBeach";
 import IconRestaurant from "../../comp/icons/iconRestaurant";
 import IconPool from "../../comp/icons/iconPool";
 import IconWifi from "../../comp/icons/iconWifi";
+//Importerar NavLink från react router
+import { NavLink } from "react-router-dom";
+//  Importera npm paketet Raing från react rating
+import Rating from "react-rating";
+//Importerar Form,input group, modal samt button från bootstrap
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
+//Importerar css fil
 import "../../styles/booking.css";
-import Footer from "../../comp/Comp_Footer";
 
 function BlueHotels() {
+  //Här används useState på samma vis som på alla andra sidor. För att hämta data från array samt checka state för .map eller filter nedan
   const [mydata, setData] = useState(hoteldata);
   return (
     <>
+      {/* Här skriv komponenten header ut */}
       <Header />
-
+      {/* Här skriver .map ut alla komponenter och .filter filtrerar den kopplat till hotellens ID 
+    {writeData.[vilken data som skall skrivas ut]} används här för att få ut rätt data från array
+    Styling och layout görs i inline stylibng eller i css
+    */}
       {mydata
         .filter((person) => person.hotel_id === "4")
         .map((writeData) => (
@@ -36,37 +46,30 @@ function BlueHotels() {
 
               <div className="HeroOverlay"></div>
             </div>
-            <div   style={{ paddingTop: "109.66px", paddingBottom: "109.66px" }} className="HotelOverviewMain">
+            <div
+              style={{ paddingTop: "109.66px", paddingBottom: "109.66px" }}
+              className="HotelOverviewMain"
+            >
               <div className="OverviewBox">
                 <h2 className="OverviewHotelName">
                   {writeData.hotel_name}
 
+                  {/* Här används Rating som är ett npm paket för att visualisera hur många stjärnor hotellet har. 
+                  Vi har använt punkter istället eftersom det passar bättre in med designen som har en mer rundad apporach 
+                  
+                  antalet punkter styrs baserat på det värde som är satt i arrayen
+                  */}
                   <Rating
                     // fullSymbol="src/img/star-solid.svg"
                     initialRating={writeData.hotel_rating}
                     readonly
                   />
-
-                  {/* <img
-                    style={{
-                      height: "2rem",
-                      margin: "-1rem auto auto 2rem",
-                    }}
-                    className="starsForHotel"
-                    src="https://cdn.glitch.global/b8bfc950-5347-4077-bd94-1e2db9ffd2ee/Star.svg?v=1664379295785"
-                    alt="Stjärna"
-                  /> */}
                 </h2>
                 <div className="starsForHotel">
                   {/** Skriva ut antal stjärnor för valt hotell från array*/}
 
                   <div className="full-hotel-icon-wrapper">
-                    {/* <img
-                      style={{ margin: "1rem" }}
-                      src="https://cdn.glitch.global/b8bfc950-5347-4077-bd94-1e2db9ffd2ee/wifi-solid.svg?v=1664459875956"
-                      alt="Ikon för trådlöst internet"
-                    /> */}
-
+                    {/* Här används en funktion för att checka om ikonen skall skrivas ut eller ej. Boolian true eller false som hämtas från array */}
                     {writeData.restaurant ? (
                       <div className="iconBoxWrapper-hotel">
                         <div className="iconImgBox-hotel">
@@ -79,7 +82,6 @@ function BlueHotels() {
                     ) : (
                       <></>
                     )}
-
                     {writeData.wifi ? (
                       <div className="iconBoxWrapper-hotel">
                         <div className="iconImgBox-hotel">
@@ -92,7 +94,6 @@ function BlueHotels() {
                     ) : (
                       <></>
                     )}
-
                     {writeData.pool ? (
                       <div className="iconBoxWrapper-hotel">
                         <div className="iconImgBox-hotel">
@@ -105,7 +106,6 @@ function BlueHotels() {
                     ) : (
                       <></>
                     )}
-
                     {writeData.beach ? (
                       <div className="iconBoxWrapper-hotel">
                         <div className="iconImgBox-hotel">
@@ -152,6 +152,7 @@ function BlueHotels() {
                   <p style={{ margin: "auto auto -10px 1rem" }}>pris från:</p>
                   <h4 style={{ color: "black" }}>{writeData.hotel_price}kr</h4>
 
+                  {/* Här används NavLink för att navigera användaren vidare till själva checkoutsteget */}
                   <div className="buttons">
                     <NavLink
                       to={writeData.Hotel_Checkout_Route}
@@ -166,7 +167,7 @@ function BlueHotels() {
               </div>
               {/* Sammanfattningen hotellvy slutar här */}
 
-              {/* Gå tillbaka till andra kategorier börjar här */}
+              {/* Gå tillbaka till andra kategorier finns här och är kollat via NavLink router för att skicka användaren tillbaka till kategorierna */}
               <NavLink
                 to="/winterhotel"
                 style={{ textDecoration: "none" }}
@@ -208,12 +209,19 @@ function BlueHotels() {
             </div>
           </div>
         ))}
+
+      {/* Komponenten Footer renderas ut här */}
       <Footer />
     </>
   );
 }
 
-// export default BlueHotels;
+//Nedan har vi nästa steg där användaren skickas vidare till själva booking eller checkout steget.
+//här kan användaren fylla i sona uppgifter, hur många dagar de planerar att bo samt hur många rum de vill boka.
+//De får även här information om vad totalpriset kommer att landa på och vid klick på boka hotell så kommer en modal upp med bokningsbekräftelse
+//Denna del använder också useState samt .map och .filter för att filtrera vilken data som visas.
+// {writeData.[vilken data som skall skrivas ut]} används här för att få ut rätt data från array
+//Styling och layout görs i inline stylibng eller i css
 
 function BlueHotelscheckout() {
   //code get data from array inside the json file.
@@ -243,12 +251,6 @@ function BlueHotelscheckout() {
     setLastName(event.target.value);
   };
 
-  //this gets the Cansellation option from form
-  const [cancellationChange, setCancellationChange] = useState("");
-  const handleCancellationChange = (event) => {
-    setCancellationChange(event.target.value);
-  };
-
   //this gets the lastname from form
   const [nightsChange, setNightChange] = useState("");
   const handleNightsChange = (event) => {
@@ -259,14 +261,6 @@ function BlueHotelscheckout() {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
-  // event on submit
-
-  // const somefunction = async (...args) => {
-  //   let result = await feedReducer(args);
-  //   console.log(result);
-  //   // do something
-  // }
 
   return (
     <>
@@ -338,9 +332,14 @@ function BlueHotelscheckout() {
               </div>
             </div>
 
-            {/* Här börjar nedre delen för booking */}
+            {/* Här börjar nedre delen för booking och är där användaren kan fylla i sina uppågifter 
+            Vi använder här på vissa av inpufälten en onChange för att senare använda den nformation som ändras eller skrivs in för att justera texten och modulen/bokningsbekräftelsen
+            */}
             <Form>
-              <div style={{marginBottom: "109.66px"}}  className="MainHome-Booking">
+              <div
+                style={{ marginBottom: "109.66px" }}
+                className="MainHome-Booking"
+              >
                 <div className="MainHomeGridItems_FormBooking">
                   <div className="bookingFormBox">
                     <h3>Bokningsinformation</h3>
@@ -494,6 +493,9 @@ function BlueHotelscheckout() {
                               alt="bild på olika kredtkorts utgivare"
                             />
                           </InputGroup.Text>
+
+                          {/* Här har jag satt en max gräns påantal nummer som kan skrivas in som ett kreditkort. 
+                          Hade tänkt att även formatera så att det blev ett mellanhopp per 4 siffra men tiden fanns inte till det */}
                           <Form.Control
                             placeholder="Kortnummer"
                             aria-label="CreditCardNumber"
@@ -580,6 +582,10 @@ function BlueHotelscheckout() {
                           <option value="6">6 rum</option>
                         </Form.Select>
                       </div>
+
+                      {/* Nedan skrivs totalpriset ut och är beräknat baserat på 3 faktorer. Dels hur många rum som bokas, dels hur många nätter samt priset per rum per natt 
+                          Har använt onChange på dessa delar som användarn fyller på och genom useState skickat den datan vidare till rätt plats så att det skrivs ut rätt. 
+                      */}
                       <div className="innerSubmitButtonWrapper">
                         <p>
                           Totalpris för bokningen är{" "}
@@ -590,15 +596,8 @@ function BlueHotelscheckout() {
                               nightsChange}kr{" "}
                           </b>
                         </p>
-
+                              {/* Ligger en onClick på knappen som öppnar själva modal (popup rutan) med bokningsbekräftelsen  */}
                         <div className="positionSubmitButtonBooking">
-                          {/* <button
-                            onClick={handleShow}
-                            style={{ justifyContent: "center" }}
-                            className="defaultButton"
-                          >
-                            Boka hotell 
-                          </button> */}
                           <Button
                             className="defaultButton"
                             type="submit"
@@ -619,6 +618,9 @@ function BlueHotelscheckout() {
                             Dagen då du planerar att checka in.
                           </p>
                           <InputGroup>
+
+                          {/* Här ligger exempelvis en onChange som skickar informationen vidare till okningsbekräftelsen.  
+                          Ser likadant ut nedan så skriver ingenting om det mer*/}
                             <Form.Control
                               required
                               onChange={handleDateChange}
@@ -633,7 +635,8 @@ function BlueHotelscheckout() {
                           </InputGroup>
                         </div>
                       </div>
-
+                        {/* Vi valde en annan lösning än att ha 2 olika kalender input fält. 
+                        Men själva className ändrade vi inte eftersom allting redan var stylat och positionerat.  */}
                       <div className="innerCheckOutDateWrapper">
                         <div className="positionCheckOutDateBooking">
                           <p style={{ margin: "0px" }}>Välj antal nätter.</p>
@@ -656,10 +659,21 @@ function BlueHotelscheckout() {
                             <option value="4">4 nätter</option>
                             <option value="5">5 nätter</option>
                             <option value="6">6 nätter</option>
+                            <option value="7">1 vecka</option>
+                            <option value="14">2 veckor</option>
+                            <option value="21">3 veckor</option>
                           </Form.Select>
                         </div>
                       </div>
+                      
+                      {/* Här har vi modalen som används som bokingsbekräftelse. Det ligger en funktionhögre 
+                      upp som baserat på knapptrycket antingen öppnar modulen eller stänger den
+                      Modulen kommer från Bootstrap
 
+                      I övrigt skrivs data som användaren har fyllt ut här där vi använt onChange för att uppdattera detta 
+                      Det är information som datum för incheckning, totalt pris, namn på personen som bokat och ett bokningnummer. 
+                    
+                      */}
                       <Modal show={show} onHide={handleClose}>
                         <Modal.Header closeButton>
                           <Modal.Title>Tack för din bokning </Modal.Title>
@@ -719,6 +733,7 @@ function BlueHotelscheckout() {
                           </p>
                         </Modal.Body>
                         <Modal.Footer>
+                          {/* Här länkas användaren tillbaka till startsidan */}
                           <NavLink to="/" style={{ textDecoration: "none" }}>
                             <button
                               className="defaultButton"
@@ -750,4 +765,5 @@ function BlueHotelscheckout() {
   );
 }
 
+//Här exporteras båda komponenterna
 export { BlueHotels, BlueHotelscheckout };
