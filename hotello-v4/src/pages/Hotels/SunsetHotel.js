@@ -1,7 +1,6 @@
 import hoteldata from "..//../hoteldata.json";
 import { useState } from "react";
 import Header from "../../comp/Comp_Header";
-import BookingHero from "../../comp/Comp_Booking_Hero";
 
 import { NavLink } from "react-router-dom";
 import Rating from "react-rating";

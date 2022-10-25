@@ -11,10 +11,7 @@ import WinterHotel from "../pages/Winter_hotel";
 import FamilyHotel from "../pages/Family_hotel";
 import SunHotel from "../pages/Sun_hotel";
 
-
-
 import {GrandHotel, GrandHotelcheckout} from "../pages/Hotels/GrandHotel";
-
 import {BlueHotels, BlueHotelscheckout} from "../pages/Hotels/BlueHotels";
 import {SunsetHotel, SunsetHotelcheckout} from "../pages/Hotels/SunsetHotel";
 import {SalsSkiResort, SalsSkiResortcheckout} from "../pages/Hotels/SalsSkiResort";

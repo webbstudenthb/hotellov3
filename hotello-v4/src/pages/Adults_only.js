@@ -23,6 +23,12 @@ function AdultsOnly() {
           style={{ paddingTop: "109.66px", paddingBottom: "109.66px" }}
           className="MainHomeGridItems"
         >
+          <div>
+            <h2>Endast vuxna</h2>
+            <p style={{ width: "70%", paddingBottom: "16px" }}>
+              För vuxna som vill ha lugn och ro så passar våra kategori <b>Endast Vuxna</b> perfekt.
+            </p>
+          </div>
           {mydata
             .filter((person) => person.hotel_tags === "Endast vuxna")
             .map((writeData) => (

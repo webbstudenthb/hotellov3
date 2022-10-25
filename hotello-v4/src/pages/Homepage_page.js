@@ -11,10 +11,6 @@ const Homepage = () => {
     <>
       <Header />
       <Hero />  
-      
-
-
-
       <MainHome />
       <Footer />
       

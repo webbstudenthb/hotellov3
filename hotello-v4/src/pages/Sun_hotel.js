@@ -21,6 +21,13 @@ function SunHotel() {
           style={{ paddingTop: "109.66px", paddingBottom: "109.66px" }}
           className="MainHomeGridItems"
         >
+
+<div>
+            <h2>Solsemester</h2>
+            <p style={{ width: "70%", paddingBottom: "16px" }}>
+              Njut av bad, strand och sol. Det innehåller våra resor till solen. 
+            </p>
+          </div>
           {mydata
             .filter((person) => person.hotel_tags === "Solsemester")
             .map((writeData) => (
