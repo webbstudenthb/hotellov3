@@ -1,3 +1,5 @@
+//Detta är en fil som inte används. Vi försökte att ta bort samt flytta koden till ett annat projekt. Men då krashade appen. Därför låter vi dem vara kvar
+
 import "../styles/bookingSummery.css";
 import "../styles/bookingForm.css";
 

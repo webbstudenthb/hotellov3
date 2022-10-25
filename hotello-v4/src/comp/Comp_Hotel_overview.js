@@ -1,13 +1,11 @@
-
+//Detta är en fil som inte används. Vi försökte att ta bort samt flytta koden till ett annat projekt. Men då krashade appen. Därför låter vi dem vara kvar
 import "../styles/hotelOverview.css";
 import "../styles/bookingOverview.css";
 import Button from "../comp/Comp_Button";
 
 
 function HotelOverview() {
-  {
-    /**Sätta en const till Arrayen och userstate */
-  }
+
   return (
     <>
       <div className="HotelOverviewMain">
@@ -89,6 +87,7 @@ function HotelOverview() {
               borderRadius: "0px 24px 24px 24px",
             }}
             src="https://cdn.glitch.global/b8bfc950-5347-4077-bd94-1e2db9ffd2ee/austria-salzburg-young-couple-skiing-on-mountain-2022-03-08-01-22-33-utc.jpeg?v=1664265142680"
+            alt="Bilden visar ett skidåkande par"
           ></img>
         </div>
         <div className="summerVacation">
@@ -101,6 +100,7 @@ function HotelOverview() {
               borderRadius: "0px 24px 24px 24px",
             }}
             src="https://cdn.glitch.me/b8bfc950-5347-4077-bd94-1e2db9ffd2ee/woman-in-bikini-on-beach-2022-02-02-03-49-15-utc.jpeg?v=1664268040112"
+            alt="bilden visar en kvinna på en strand."
           ></img>
         </div>
       </div>
