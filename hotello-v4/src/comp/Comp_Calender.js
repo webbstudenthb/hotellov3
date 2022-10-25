@@ -1,3 +1,5 @@
+//Detta är en fil som inte används. Vi försökte att ta bort samt flytta koden till ett annat projekt. Men då krashade appen. Därför låter vi dem vara kvar
+
 import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import "../styles/calender.css";
